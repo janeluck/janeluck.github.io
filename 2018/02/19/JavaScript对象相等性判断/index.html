@@ -100,27 +100,27 @@
 
 
   
-  <meta name="keywords" content="node," />
+  <meta name="keywords" content="javascript," />
 
 
-<meta name="description" content="版本号遵循semver规则 发布的包是cli工具时(全局安装), 一定要删掉package-lock.json.package-lock.json is that it cannot be published">
-<meta name="keywords" content="node">
+<meta name="description" content="函数isEqual接收两个对象, 判断它们的相等性, 返回boolean #####根据相等判断的实用性, 做出如下的相等性说明:  原始类型Number, String, Boolean, Undefined, Null: 直接通过===判断, 经过对象包装(eg: new Number(1))的这类对象转换为原始类型再判断(即_.isEqual(new Number(1), 1)===true">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm publish注意事项">
-<meta property="og:url" content="http://yoursite.com/2018/02/17/npm-publish/index.html">
+<meta property="og:title" content="JavaScript对象相等性判断">
+<meta property="og:url" content="http://yoursite.com/2018/02/19/JavaScript对象相等性判断/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="版本号遵循semver规则 发布的包是cli工具时(全局安装), 一定要删掉package-lock.json.package-lock.json is that it cannot be published">
-<meta property="og:updated_time" content="2018-02-18T16:31:33.078Z">
+<meta property="og:description" content="函数isEqual接收两个对象, 判断它们的相等性, 返回boolean #####根据相等判断的实用性, 做出如下的相等性说明:  原始类型Number, String, Boolean, Undefined, Null: 直接通过===判断, 经过对象包装(eg: new Number(1))的这类对象转换为原始类型再判断(即_.isEqual(new Number(1), 1)===true">
+<meta property="og:updated_time" content="2018-02-19T13:07:41.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="npm publish注意事项">
-<meta name="twitter:description" content="版本号遵循semver规则 发布的包是cli工具时(全局安装), 一定要删掉package-lock.json.package-lock.json is that it cannot be published">
+<meta name="twitter:title" content="JavaScript对象相等性判断">
+<meta name="twitter:description" content="函数isEqual接收两个对象, 判断它们的相等性, 返回boolean #####根据相等判断的实用性, 做出如下的相等性说明:  原始类型Number, String, Boolean, Undefined, Null: 直接通过===判断, 经过对象包装(eg: new Number(1))的这类对象转换为原始类型再判断(即_.isEqual(new Number(1), 1)===true">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/17/npm-publish/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/19/JavaScript对象相等性判断/"/>
 
 
 
@@ -129,7 +129,7 @@
     sidebar: "",
   };
 </script>
-  <title>npm publish注意事项 | Hexo</title>
+  <title>JavaScript对象相等性判断 | Hexo</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/17/npm-publish/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/JavaScript对象相等性判断/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jane">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">npm publish注意事项</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript对象相等性判断</h1>
         
 
         <div class="post-meta">
@@ -299,7 +299,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-17T20:37:32+08:00">2018-02-17</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-19T21:07:25+08:00">2018-02-19</time>
             
 
             
@@ -336,10 +336,75 @@
       
 
       
-        <ol>
-<li>版本号遵循<a href="https://github.com/npm/node-semver#readme" target="_blank" rel="noopener">semver</a>规则</li>
-<li>发布的包是cli工具时(全局安装), 一定要删掉package-lock.json.<a href="https://docs.npmjs.com/files/package-lock.json" target="_blank" rel="noopener">package-lock.json is that it cannot be published</a></li>
-</ol>
+        <p>函数isEqual接收两个对象, 判断它们的相等性, 返回boolean</p>
+<p>#####根据相等判断的实用性, 做出如下的相等性说明:</p>
+<ul>
+<li><p>原始类型<code>Number</code>, <code>String</code>, <code>Boolean</code>, <code>Undefined</code>, <code>Null</code>: 直接通过===判断, 经过对象包装(eg: new Number(1))的这类对象转换为原始类型再判断(即_.isEqual(new Number(1), 1)===true)</p>
+</li>
+<li><p>引用类型<code>Object</code>: 引用相同, 必然相等; 引用不同, 进行深入比较(其中type为function的类型, 先判断构造函数是是否相等, 再判断其自有的属性和方法是否也一致)</p>
+</li>
+</ul>
+<p>#####原生js存在的不完善地方,这里列举一些常用到的特例:</p>
+<ul>
+<li>原生会返回true的情况:<ul>
+<li><code>null == undefined</code>(通过<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  + `-0 === +0`(通过```-Infinity === Infinity```返回false修正)</span><br><span class="line">  + `NaN !== NaN`(通过```if(a!==a) return (b!==b)```修正)</span><br><span class="line"></span><br><span class="line"> + 原生会返回false</span><br><span class="line">  + 经过对象包装的原始类型的比较: `new Number(1) === 1` (原生的这样判断其实是无可厚非的, 实际运用中我们统一都归为相等)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#####用到的工具:</span><br><span class="line">+ typeof</span><br><span class="line">+ Object.prototype.toString</span><br><span class="line">+ 运算符`+`可以把字符串转为数字</span><br><span class="line">+ lodash的keys,has方法</span><br><span class="line"></span><br><span class="line">#####使用例子:</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>isEqual({name: ‘rose’}, {name: ‘rose’}) // 返回true<br>isEqual([{name: ‘rose’}, 2], [{name: ‘rose’}, 2]) // 返回true<br>var A = function(){}<br>var B = new A<br>var C = new A<br>isEqual(B, C) //返回true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">代码：</span><br></pre></td></tr></table></figure></p>
+<p>import _ from ‘lodash’<br>var toString = Object.prototype.toString</p>
+<p>var isEqual = function (a, b, aStack, bStack) {<br>  //原始类型Number, String, Boolean</p>
+<p>  // 0 === -0 使用 1 / 0 !== 1/ -0 排除</p>
+<p>  if (a === b) return a !== 0 || 1 / a === 1 / b</p>
+<p>  // null == undefined  返回true<br>  // null === undefined 返回false<br>  if (a == null || b == null) return a === b</p>
+<p>  // isNaN !== isNaN 返回true<br>  if (a !== a) return b !== b</p>
+<p>  var className = toString.call(a)<br>  if (className !== toString.call(b)) return false<br>  switch (className) {</p>
+<pre><code>case &apos;[object RegExp]&apos;:
+case &apos;[object String]&apos;:
+  return &apos;&apos; + a === &apos;&apos; + b
+
+case &apos;[object Number]&apos;:
+  if (+a !== +a) return +b !== +b
+  return +a === 0 ? 1 / +a === 1 / b : +a === +b
+case &apos;[object Date]&apos;:
+case &apos;[object Boolean]&apos;:
+  return +a === +b
+// todo case &apos;[object Symbol]&apos;
+</code></pre><p>  }</p>
+<p>  // 判断a 是否为数组<br>  var areArrays = className === ‘[object Array]’<br>  if (!areArrays) {<br>    if (typeof a !== ‘object’ || typeof b !== ‘object’) return false</p>
+<pre><code>// Objects with different constructors are not equivalent, but `Object`s or `Array`s
+// from different frames are.
+// 先判断构造函数是否相同
+var aCtor = a.constructor, bCtor = b.constructor
+if (aCtor !== bCtor) return false
+</code></pre><p>  }</p>
+<p>  aStack = aStack || []<br>  bStack = bStack || []</p>
+<p>  var length = aStack.length<br>  while (length–) {<br>    // 避免循环引用导致的死循环<br>    if (aStack[length] === a) return bStack[length] === b<br>  }</p>
+<p>  aStack.push(a)<br>  bStack.push(b)</p>
+<p>  if (areArrays) {<br>    length = a.length<br>    if (length !== b.length) return false</p>
+<pre><code>while (length--) {
+  if (!isEqual(a[length], b[length], aStack, bStack)) return false
+}
+</code></pre><p>  } else {<br>    var keys = <em>.keys(a), key<br>    length = keys.length<br>    if (</em>.keys(b).length !== length) return false;</p>
+<pre><code>while (length--) {
+  // Deep compare each member
+  // 递归比较
+  key = keys[length];
+  if (!(_.has(b, key) &amp;&amp; isEqual(a[key], b[key], aStack, bStack))) return false;
+}
+</code></pre><p>  }</p>
+<p>  aStack.pop()<br>  bStack.pop()<br>  return true<br>}<br>export {<br>  isEqual<br>}</p>
+<p>```</p>
+<p>todo:</p>
+<ul>
+<li>去掉lodash的依赖， 写一个从零开始的对象判断</li>
+<li>加入es6新类型数据结构的判断</li>
+</ul>
+<p>参考链接:</p>
+<ul>
+<li><a href="https://lodash.com/docs/4.17.4" target="_blank" rel="noopener">lodash</a></li>
+<li><a href="https://github.com/hanzichi/underscore-analysis/blob/master/underscore-1.8.3.js/underscore-1.8.3-analysis.js" target="_blank" rel="noopener">underscore源码分析</a></li>
+</ul>
 
       
     </div>
@@ -360,7 +425,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/node/" rel="tag"># node</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
         </div>
       
@@ -373,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/11/git常用命令/" rel="next" title="git常用命令">
-                <i class="fa fa-chevron-left"></i> git常用命令
+              <a href="/2018/02/19/JavaScript实现中序表达式转逆波兰表达式/" rel="next" title="JavaScript实现中序表达式转逆波兰表达式">
+                <i class="fa fa-chevron-left"></i> JavaScript实现中序表达式转逆波兰表达式
               </a>
             
           </div>
@@ -383,8 +448,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/19/nodejs-console-color/" rel="prev" title="nodejs-console-color">
-                nodejs-console-color <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/19/连通图求解最小生成树/" rel="prev" title="连通图求解最小生成树">
+                连通图求解最小生成树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
