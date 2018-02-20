@@ -100,27 +100,27 @@
 
 
   
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="MongoDB," />
 
 
-<meta name="description" content="module:   id name src dep">
-<meta name="keywords" content="JavaScript">
+<meta name="description" content="MongoDB Cook Book #####MongoDB: 面向文档的数据库，主要面向集合和文档  与关系型数据库相比     关系型数据库 MongoDB     数据库 数据库   表 集合   行 文档   列 字段   表Join 内嵌文档   主键 主键（由 MongoDB 提供的默认 key_id）     数据类型  String Integer Boolean Double A">
+<meta name="keywords" content="MongoDB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="requirejs">
-<meta property="og:url" content="http://yoursite.com/2017/08/14/requirejs/index.html">
+<meta property="og:title" content="MongoDB学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/02/20/MongoDB学习笔记/index.html">
 <meta property="og:site_name" content="Jane&#39;s Blog">
-<meta property="og:description" content="module:   id name src dep">
-<meta property="og:updated_time" content="2018-02-20T12:26:50.251Z">
+<meta property="og:description" content="MongoDB Cook Book #####MongoDB: 面向文档的数据库，主要面向集合和文档  与关系型数据库相比     关系型数据库 MongoDB     数据库 数据库   表 集合   行 文档   列 字段   表Join 内嵌文档   主键 主键（由 MongoDB 提供的默认 key_id）     数据类型  String Integer Boolean Double A">
+<meta property="og:updated_time" content="2018-02-20T12:26:50.263Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="requirejs">
-<meta name="twitter:description" content="module:   id name src dep">
+<meta name="twitter:title" content="MongoDB学习笔记">
+<meta name="twitter:description" content="MongoDB Cook Book #####MongoDB: 面向文档的数据库，主要面向集合和文档  与关系型数据库相比     关系型数据库 MongoDB     数据库 数据库   表 集合   行 文档   列 字段   表Join 内嵌文档   主键 主键（由 MongoDB 提供的默认 key_id）     数据类型  String Integer Boolean Double A">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/14/requirejs/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/20/MongoDB学习笔记/"/>
 
 
 
@@ -129,7 +129,7 @@
     sidebar: "",
   };
 </script>
-  <title>requirejs | Jane's Blog</title>
+  <title>MongoDB学习笔记 | Jane's Blog</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/requirejs/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/20/MongoDB学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jane">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">requirejs</h1>
+          <h1 class="post-title" itemprop="name headline">MongoDB学习笔记</h1>
         
 
         <div class="post-meta">
@@ -299,7 +299,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-14T17:17:15+08:00">2017-08-14</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-20T20:25:04+08:00">2018-02-20</time>
             
 
             
@@ -336,15 +336,87 @@
       
 
       
-        <p>module: </p>
+        <p><a href="http://wiki.jikexueyuan.com/project/mongodb/mongodb-php.html" target="_blank" rel="noopener">MongoDB Cook Book</a></p>
+<p>#####MongoDB: 面向文档的数据库，主要面向集合和文档</p>
 <ul>
-<li>id</li>
-<li>name</li>
-<li>src</li>
-<li>dep</li>
+<li>与关系型数据库相比</li>
 </ul>
-<pre><code class="js">
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>关系型数据库</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据库</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>表</td>
+<td>集合</td>
+</tr>
+<tr>
+<td>行</td>
+<td>文档</td>
+</tr>
+<tr>
+<td>列</td>
+<td>字段</td>
+</tr>
+<tr>
+<td>表Join</td>
+<td>内嵌文档</td>
+</tr>
+<tr>
+<td>主键</td>
+<td>主键（由 MongoDB 提供的默认 key_id）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>数据类型</p>
+<ul>
+<li>String</li>
+<li>Integer</li>
+<li>Boolean</li>
+<li>Double</li>
+<li>Array</li>
+<li>Min/Max keys</li>
+<li>Object</li>
+<li>Null</li>
+<li>Date</li>
+<li>Object ID</li>
+<li>Binary Data</li>
+<li>Symbol</li>
+<li>Timestamp</li>
+<li>Code</li>
+<li>Regular expression</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>增删改查<ul>
+<li>create</li>
+<li>insert</li>
+<li>drop</li>
+<li>find<ul>
+<li>where</li>
+<li>AND, OR</li>
+<li>limit, skip</li>
+<li>sort</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>#####Questions:</p>
+<ul>
+<li>索引</li>
+<li>聚合，分片</li>
+</ul>
 
       
     </div>
@@ -365,7 +437,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
           
         </div>
       
@@ -378,15 +450,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/02/19/连通图求解最小生成树/" rel="next" title="连通图求解最小生成树">
+                <i class="fa fa-chevron-left"></i> 连通图求解最小生成树
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/22/regex/" rel="prev" title="regex">
-                regex <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
