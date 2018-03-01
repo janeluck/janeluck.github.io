@@ -266,6 +266,146 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/css定位总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/01/css定位总结/" itemprop="url">css定位总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-01T23:42:12+08:00">2018-03-01</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="css定位体系总结"><a href="#css定位体系总结" class="headerlink" title="css定位体系总结"></a>css定位体系总结</h1><p>常规流(Normal Flow),元素不设置position,float,display的值且元素所有的祖先元素不设置这三值的时候,元素处于常规流.<br>(若有祖先元素设置了这三个值中的某一个,那就形成了另外的一个常规流).</p>
+<h2 id="一、position"><a href="#一、position" class="headerlink" title="一、position"></a>一、position</h2><ol>
+<li>默认值为static.</li>
+<li>设置为relative时,元素还在常规流中,但是可以使用top,left,right,bottom相对于其在常规流的位置进行定位,且不会影响<br>到兄弟元素.</li>
+<li>设置为absolute时,元素脱离常规流,可以使用top,left,right,bottom相对于最近的设置了position属性(不是static)的祖先<br>元素进行定位.</li>
+<li>设置为fixed时,元素脱离常规流,可以使用top,left,right,bottom相对于屏幕窗口定位.</li>
+</ol>
+<h2 id="二、float"><a href="#二、float" class="headerlink" title="二、float"></a>二、float</h2><ol>
+<li>首先要看元素是否设置了position值,如果元素的position值为absolute或者fixed,float计算后则为”none”.</li>
+<li>如果元素的position值为relative,float的值不为none,那么元素可以根据漂浮后的位置使用left,right,top,bottom进行定位.</li>
+<li>float值有效时,就使元素脱离的常规流,且对display的值有影响.</li>
+</ol>
+<h2 id="三、display"><a href="#三、display" class="headerlink" title="三、display"></a>三、display</h2><ol>
+<li>上述position,float的情况都是基于display不为none时.</li>
+<li>display不为none时,其计算后的值会受到position,float的影响,不会单纯使用手动设置的值</li>
+</ol>
+<p><a href="http://w3help.org/zh-cn/kb/009/" target="_blank" rel="noopener">w3</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/二分法实现repeat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1505,147 +1645,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/11/git常用命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/11/git常用命令/" itemprop="url">git常用命令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-11T08:20:38+08:00">2018-02-11</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>git fetch</li>
-<li>git pull</li>
-<li><p>git pull origin master</p>
-</li>
-<li><p>git merge</p>
-</li>
-<li><p>git remote -v</p>
-</li>
-<li><p>git remote add [name] [url]</p>
-</li>
-<li><p>git log</p>
-</li>
-<li><p>git log –stat</p>
-</li>
-<li><p>git diff HEAD~ HEAD</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1697,7 +1696,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
