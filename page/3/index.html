@@ -100,27 +100,22 @@
 
 
   
-  <meta name="keywords" content="Git," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
-<meta name="description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat  git diff HEAD~ HEAD">
-<meta name="keywords" content="Git">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令">
-<meta property="og:url" content="http://yoursite.com/2018/02/11/git常用命令/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jane&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="Jane&#39;s Blog">
-<meta property="og:description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat  git diff HEAD~ HEAD">
-<meta property="og:updated_time" content="2018-02-20T12:26:50.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令">
-<meta name="twitter:description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat  git diff HEAD~ HEAD">
+<meta name="twitter:title" content="Jane&#39;s Blog">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/11/git常用命令/"/>
+  <link rel="canonical" href="http://yoursite.com/page/3/"/>
 
 
 
@@ -129,7 +124,7 @@
     sidebar: "",
   };
 </script>
-  <title>git常用命令 | Jane's Blog</title>
+  <title>Jane's Blog</title>
   
 
 
@@ -176,7 +171,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -253,9 +249,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -270,7 +266,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/11/git常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/22/regex/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jane">
@@ -287,7 +283,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git常用命令</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/22/regex/" itemprop="url">regex</a></h1>
         
 
         <div class="post-meta">
@@ -299,7 +297,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-11T08:20:38+08:00">2018-02-11</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-22T16:34:17+08:00">2017-08-22</time>
             
 
             
@@ -336,25 +334,103 @@
       
 
       
-        <ul>
-<li>git fetch</li>
-<li>git pull</li>
-<li><p>git pull origin master</p>
+        
+          
+            <ul>
+<li><p>常用元字符</p>
+<ul>
+<li><code>\d</code>: 匹配数字</li>
+<li><code>\w</code>: 匹配字母,下划线,数字,汉字</li>
+<li><code>\s</code>: 匹配空白符,包括空格,制表符(tab),换行符,中文全角空格</li>
+<li><code>\b</code>: 匹配单词边界</li>
+<li><code>.</code>: 匹配除了换行符外的任意字符</li>
+<li><code>^</code>: 匹配开头</li>
+<li><code>$</code>: 匹配结尾</li>
+</ul>
 </li>
-<li><p>git merge</p>
+<li><p>常用限定符</p>
+<ul>
+<li><code>?</code>: 出现零次或一次</li>
+<li><code>*</code>: 出现零次或多次</li>
+<li><code>+</code>: 出现一次或更多次</li>
+<li><code>{n}</code>: 出现n次</li>
+<li><code>{n, m}</code>: 出现n~m次</li>
+<li><code>{n,}</code>: 出现大于等于n次</li>
+</ul>
 </li>
-<li><p>git remote -v</p>
+<li><p>反义</p>
+<ul>
+<li><code>\D</code>: 匹配非数字</li>
+<li><code>\W</code>: 匹配非字母,非下划线,非数字,非汉字</li>
+<li><code>\B</code>: 匹配非单词边界</li>
+<li><code>\S</code>: 匹配非空白符</li>
+<li><code>[^a]</code>: 匹配非a</li>
+<li><code>[^aeiou]</code>: 匹配非aeiou中的任何一个</li>
+</ul>
 </li>
-<li><p>git remote add [name] [url]</p>
+<li><p>分组    </p>
+<ul>
+<li><code>(exp)</code>: 匹配exp,并捕获文本到自动命名的组里</li>
+<li><code>(?&lt;name&gt;exp)</code>: 匹配exp,并命名分组name</li>
+<li><code>(?:exp)</code>: 匹配exp,不捕获 </li>
+</ul>
 </li>
-<li><p>git log</p>
+<li><p>后向引用</p>
+<ul>
+<li><code>$1</code>: 捕获用<code>()</code>匹配的分组1</li>
+<li><code>$groupName</code>: 捕获用<code>()</code>匹配的命名分组groupName</li>
+</ul>
 </li>
-<li><p>git log –stat</p>
-</li>
-<li><p>git diff HEAD~ HEAD</p>
+<li><p>匹配或的集合</p>
+<ul>
+<li><code>[]</code>: 方括号<ul>
+<li><code>[aeiou]</code></li>
+<li><code>[^aeiou]</code></li>
+<li><code>[^.*?]</code></li>
+</ul>
 </li>
 </ul>
+</li>
+<li><p>分支条件</p>
+<ul>
+<li><code>|</code>: 竖杠</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>贪婪与懒惰</p>
+<p>  默认总是匹配最多的情况,即贪婪, <code>.*</code> 会匹配尽可能多的重复。可以在后面加个<code>?</code>, 组成<code>.*?</code>, 即懒惰, 匹配尽可能少的符合条件的重复</p>
+</li>
+<li><p>零宽断言</p>
+<ul>
+<li><p>(?=exp)也叫零宽度正预测先行断言，它断言自身出现的位置的后面能匹配表达式exp。比如\b\w+(?=ing\b)，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找I’m singing while you’re dancing.时，它会匹配sing和danc。</p>
+</li>
+<li><p>(?&lt;=exp)也叫零宽度正回顾后发断言，它断言自身出现的位置的前面能匹配表达式exp。比如(?&lt;=\bre)\w+\b会匹配以re开头的单词的后半部分(除了re以外的部分)，例如在查找reading a book时，它匹配ading。</p>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>eg:</th>
+<th>aabab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a.*b</td>
+<td>aabab</td>
+</tr>
+<tr>
+<td>a.*?b</td>
+<td>aab</td>
+</tr>
+</tbody>
+</table>
 
+          
+        
       
     </div>
 
@@ -372,40 +448,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Git/" rel="tag"># Git</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/01/02/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/17/npm-publish/" rel="prev" title="npm publish注意事项">
-                npm publish注意事项 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -415,19 +465,148 @@
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/requirejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/14/requirejs/" itemprop="url">requirejs</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-14T17:17:15+08:00">2017-08-14</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>module: </p>
+<ul>
+<li>id</li>
+<li>name</li>
+<li>src</li>
+<li>dep</li>
+</ul>
+
+          
+        
       
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 
 
           </div>
           
-
-  
-
-
 
         </div>
         
@@ -674,10 +853,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.4"></script>
-
-
 
   
 
