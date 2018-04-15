@@ -104,11 +104,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Jane&#39;s Blog">
+<meta property="og:title" content="Jane&#39;s Notes">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="Jane&#39;s Blog">
+<meta property="og:site_name" content="Jane&#39;s Notes">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jane&#39;s Blog">
+<meta name="twitter:title" content="Jane&#39;s Notes">
 
 
 
@@ -124,7 +125,7 @@
     sidebar: "",
   };
 </script>
-  <title>Jane's Blog</title>
+  <title>Jane's Notes</title>
   
 
 
@@ -164,7 +165,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
   
@@ -183,7 +184,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Jane's Blog</span>
+        <span class="site-title">Jane's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -210,19 +211,19 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />archives</a>
         </li>
       
 
@@ -266,6 +267,921 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/JavaScript实现中序表达式转逆波兰表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/19/JavaScript实现中序表达式转逆波兰表达式/" itemprop="url">JavaScript实现中序表达式转逆波兰表达式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-19T21:05:11+08:00">2018-02-19</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>四则运算中缀表达式转换成逆波兰表达式<blockquote>
+<p>中缀表达式： 1 + 5 <em> 3 + (6 - 2) / 2 - 4<br>输入[‘1’, ‘+’, ‘5’,  ‘</em>‘, ‘3’, ‘+’, ‘(‘, ‘6’,  ‘-‘,  ‘2’, ‘)’, ‘/‘, ‘2’,  ‘-‘, ‘4’]<br>输出[ ‘1’, ‘5’, ‘3’, ‘*’, ‘+’, ‘6’, ‘2’, ‘-‘, ‘2’, ‘/‘, ‘+’, ‘4’, ‘-‘ ]</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toPPN</span>(<span class="params">origin</span>) </span>&#123;</span><br><span class="line"><span class="meta">    'use strict'</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Object</span>.prototype.toString.call(origin) !== <span class="string">'[object Array]'</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.error(<span class="string">'非法输入, 请输入格式正确的中缀表达式数组'</span>)</span><br><span class="line">        <span class="keyword">return</span> []</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> ppn = [], operator = [];</span><br><span class="line">    <span class="comment">// 遍历中缀表达式转换成的数组</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; origin.length; i++) &#123;</span><br><span class="line">        <span class="keyword">const</span> item = origin[i]</span><br><span class="line">        <span class="comment">// 校验原始输入的元素是否符合要求</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isNaN</span>(item) &amp;&amp; ([<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="string">'*'</span>, <span class="string">'/'</span>, <span class="string">'('</span>, <span class="string">')'</span>]).indexOf(item) &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="built_in">console</span>.error(<span class="string">'中缀表达式的组成元素不符合规则, 请检查修正'</span>)</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 判断该位置上的元素是否为数字</span></span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(item)) &#123;</span><br><span class="line">            <span class="comment">// 如果是数字， item推入ppn</span></span><br><span class="line">            ppn.push(item)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (item === <span class="string">'('</span> || operator.length === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果是'('或者operator为空数组, item推入operator</span></span><br><span class="line">            operator.push(item)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (item === <span class="string">')'</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果是')', operator从末尾弹出运算符并推入ppn直到'('</span></span><br><span class="line">            <span class="keyword">do</span> &#123;</span><br><span class="line">                ppn.push(operator.pop())</span><br><span class="line">            &#125; <span class="keyword">while</span> (operator[operator.length - <span class="number">1</span>] !== <span class="string">'('</span>)</span><br><span class="line">            <span class="comment">// operator弹出'('</span></span><br><span class="line">            operator.pop()</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!needPop(item, operator[operator.length - <span class="number">1</span>])) &#123;</span><br><span class="line"></span><br><span class="line">            operator.push(item)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 比较运算符的优先级, 如果item低于operator栈顶符号优先级, operator弹出尾元素并推入到ppn</span></span><br><span class="line">            <span class="keyword">while</span> (operator.length &amp;&amp; needPop(item, operator[operator.length - <span class="number">1</span>])) &#123;</span><br><span class="line">                ppn.push(operator.pop())</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            operator.push(item)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 最后, 逐次弹出operator尾元素入栈到ppn</span></span><br><span class="line">    <span class="keyword">while</span> (operator.length) &#123;</span><br><span class="line">        ppn.push(operator.pop())</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ppn</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">needPop</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// b: operator的尾元素</span></span><br><span class="line">    <span class="keyword">if</span> (b === <span class="string">'('</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">if</span> ((a === <span class="string">'*'</span> || a === <span class="string">'/'</span>) &amp;&amp; (b === <span class="string">'+'</span> || b === <span class="string">'-'</span>)) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/nodejs-console-color/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/19/nodejs-console-color/" itemprop="url">nodejs-console-color</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-19T00:17:10+08:00">2018-02-19</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>NodeJS在终端中输出信息的颜色控制，可使用<code>chalk</code>模块</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'\x1b[36m%s\x1b[0m'</span>, <span class="string">'your string!'</span>)</span><br></pre></td></tr></table></figure>
+<p><code>\x1b[36m</code>改变输出的字体颜色, <code>s%</code>格式化占位符, <code>\x1b[0m</code>是输出原本的颜色</p>
+<p><a href="https://github.com/chalk/chalk" target="_blank" rel="noopener">chalk</a><br><a href="https://dev.to/moriczgergo/nodejs-console-colors-101" target="_blank" rel="noopener">颜色说明</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/17/npm-publish/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/17/npm-publish/" itemprop="url">npm publish注意事项</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-17T20:37:32+08:00">2018-02-17</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>版本号遵循<a href="https://github.com/npm/node-semver#readme" target="_blank" rel="noopener">semver</a>规则</li>
+<li>发布的包是cli工具时(全局安装), 一定要删掉package-lock.json.<a href="https://docs.npmjs.com/files/package-lock.json" target="_blank" rel="noopener">package-lock.json is that it cannot be published</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/11/git常用命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/11/git常用命令/" itemprop="url">git常用命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-11T08:20:38+08:00">2018-02-11</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>git fetch</li>
+<li>git pull</li>
+<li><p>git pull origin master</p>
+</li>
+<li><p>git merge</p>
+</li>
+<li><p>git remote -v</p>
+</li>
+<li><p>git remote add [name] [url]</p>
+</li>
+<li><p>git log</p>
+</li>
+<li>git log –stat</li>
+<li>git log –stat –author=”jane”</li>
+<li><p>git diff HEAD~ HEAD</p>
+</li>
+<li><p>git stash</p>
+</li>
+<li><p>git stash pop</p>
+</li>
+<li><p>git archive –format zip –output /full/path/to/zipfile.zip master</p>
+</li>
+<li>git config core.ignorecase false</li>
+<li>git merge -X theirs origin/master</li>
+<li>git remote update origin  –prune 更新本地的远程分支列表</li>
+<li>git cherry-pick  commithash  只合并某一次提交</li>
+</ul>
+<ul>
+<li>git checkout tags/<tag-name> -b <branch-name></branch-name></tag-name></li>
+<li>git tag -l</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/30/金额处理生成器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/30/金额处理生成器/" itemprop="url">金额处理生成器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-30T15:55:35+08:00">2017-08-30</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 金额处理生成器</span></span><br><span class="line"><span class="comment"> * 整数部分三位一分隔, 并保留对应小数位</span></span><br><span class="line"><span class="comment"> * @param &#123;String&#125; 整数位分隔符, 默认值','</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; 保留的小数位, 默认值2</span></span><br><span class="line"><span class="comment"> * @returns &#123;Function&#125;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateFormatter</span>(<span class="params">str = <span class="string">','</span>, n = <span class="number">2</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">originNumber</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> parts = <span class="built_in">Number</span>(originNumber).toFixed(n).split(<span class="string">'.'</span>)</span><br><span class="line">    <span class="keyword">return</span> parts[<span class="number">0</span>].replace(<span class="regexp">/(\d)(?=(\d&#123;3&#125;)+$)/g</span>, <span class="string">"$1"</span> + str) + <span class="string">'.'</span> + parts[<span class="number">1</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取两位小数, 整数部分三位一分隔, 分隔符为','</span></span><br><span class="line"><span class="keyword">const</span> getFormatedNumber = generateFormatter()</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/29/svg/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/29/svg/" itemprop="url">svg</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-29T17:53:44+08:00">2017-08-29</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>svg<br>fill: currentColor<br>images @2x<br>codepen</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/22/string/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/22/string/" itemprop="url">string</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-22T16:35:17+08:00">2017-08-22</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>string</p>
+<ul>
+<li>slice</li>
+<li>splice</li>
+<li>substr</li>
+<li>substring</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/22/regex/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -275,7 +1191,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
+      <meta itemprop="name" content="Jane's Notes">
     </span>
 
     
@@ -295,9 +1211,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">post.posted</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-22T16:34:17+08:00">2017-08-22</time>
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-22T16:34:17+08:00">2017-08-22</time>
             
 
             
@@ -490,7 +1406,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
+      <meta itemprop="name" content="Jane's Notes">
     </span>
 
     
@@ -510,9 +1426,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">post.posted</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-14T17:17:15+08:00">2017-08-14</time>
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-14T17:17:15+08:00">2017-08-14</time>
             
 
             
@@ -647,8 +1563,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">state.posts</span>
                   </a>
                 </div>
               
@@ -684,8 +1600,12 @@
                     
                       
                     
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">tags</span>
+                    <span class="site-state-item-name">state.tags</span>
                   </a>
                 </div>
               
@@ -747,7 +1667,7 @@
 
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">footer.powered</div>
 
 
 
@@ -755,7 +1675,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
+  <div class="theme-info">footer.theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
 
 
 

@@ -104,11 +104,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Jane&#39;s Blog">
+<meta property="og:title" content="Jane&#39;s Notes">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Jane&#39;s Blog">
+<meta property="og:site_name" content="Jane&#39;s Notes">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jane&#39;s Blog">
+<meta name="twitter:title" content="Jane&#39;s Notes">
 
 
 
@@ -124,7 +125,7 @@
     sidebar: "",
   };
 </script>
-  <title>Jane's Blog</title>
+  <title>Jane's Notes</title>
   
 
 
@@ -164,7 +165,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
   
@@ -183,7 +184,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Jane's Blog</span>
+        <span class="site-title">Jane's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -210,19 +211,19 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />archives</a>
         </li>
       
 
@@ -266,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/07/varVSlet/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/react-redux的connect组件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jane">
@@ -275,7 +276,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
+      <meta itemprop="name" content="Jane's Notes">
     </span>
 
     
@@ -285,7 +286,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/07/varVSlet/" itemprop="url">varVSlet</a></h1>
+                <a class="post-title-link" href="/2018/04/02/react-redux的connect组件/" itemprop="url">react-redux的connect组件</a></h1>
         
 
         <div class="post-meta">
@@ -295,9 +296,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">post.posted</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-07T14:53:33+08:00">2018-03-07</time>
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-04-02T15:28:24+08:00">2018-04-02</time>
             
 
             
@@ -336,9 +337,7 @@
       
         
           
-            <h5 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h5><p>语句块</p>
-<h5 id="声明语句"><a href="#声明语句" class="headerlink" title="声明语句"></a>声明语句</h5><p>通过var声明的变量可以重复声明, let只能声明一次</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i++; i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)</span><br><span class="line">  &#125;, i * <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i++; i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  (<span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;, i * <span class="number">100</span>)</span><br><span class="line">  &#125;)(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i++; i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)</span><br><span class="line">  &#125;, i * <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            
           
         
       
@@ -391,7 +390,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/07/typescript/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/29/JavaScript模块开发标准/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jane">
@@ -400,7 +399,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
+      <meta itemprop="name" content="Jane's Notes">
     </span>
 
     
@@ -410,7 +409,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/07/typescript/" itemprop="url">typescript</a></h1>
+                <a class="post-title-link" href="/2018/03/29/JavaScript模块开发标准/" itemprop="url">JavaScript模块开发标准</a></h1>
         
 
         <div class="post-meta">
@@ -420,9 +419,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">post.posted</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-07T14:10:05+08:00">2018-03-07</time>
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-29T17:18:18+08:00">2018-03-29</time>
             
 
             
@@ -461,1017 +460,28 @@
       
         
           
-            <h5 id="基础类型"><a href="#基础类型" class="headerlink" title="基础类型"></a>基础类型</h5><ul>
-<li>array</li>
-<li>string</li>
-<li>number</li>
-<li>void</li>
-<li>never</li>
-<li>enum</li>
-<li>null, undefined</li>
-</ul>
-<h5 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h5>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/npm版本号/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/04/npm版本号/" itemprop="url">npm版本号</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-04T23:06:20+08:00">2018-03-04</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="语义化的版本控制"><a href="#语义化的版本控制" class="headerlink" title="语义化的版本控制"></a>语义化的版本控制</h3><p>npm包的版本号的格式X.Y.Z,版本好的格式遵循<code>semver 2.0</code>规范，其中X为主版本号，只有更新了不向下兼容的API时进行修改主版本号，Y为次版本号，当模块增加了向下兼容的功能时进行修改，Z为修订版本号，当模块进行了向下兼容的bug修改后进行修改。</p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>含义</th>
-<th>例子1</th>
-<th>例子2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>^</td>
-<td>限定模块的主要版本</td>
-<td>^1.5.1: <code>1.5.1&lt;=  x &lt;2.0.0</code></td>
-<td>^0.5.1: <code>0.5.1</code> &lt;= x &lt;0.6.0`</td>
-</tr>
-<tr>
-<td>~</td>
-<td>限定模块的次要版本</td>
-<td>~1.5.1: <code>1.5.1&lt;=  x &lt;1.6.0</code></td>
-<td>~0.5.1: <code>0.5.1</code> &lt;= x &lt;0.6.0`</td>
-</tr>
-<tr>
-<td>x, *</td>
-<td>通配符</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/css定位总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/01/css定位总结/" itemprop="url">css定位总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-01T23:42:12+08:00">2018-03-01</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="css定位体系总结"><a href="#css定位体系总结" class="headerlink" title="css定位体系总结"></a>css定位体系总结</h1><p>常规流(Normal Flow),元素不设置position,float,display的值且元素所有的祖先元素不设置这三值的时候,元素处于常规流.<br>(若有祖先元素设置了这三个值中的某一个,那就形成了另外的一个常规流).</p>
-<h2 id="一、position"><a href="#一、position" class="headerlink" title="一、position"></a>一、position</h2><ol>
-<li>默认值为static.</li>
-<li>设置为relative时,元素还在常规流中,但是可以使用top,left,right,bottom相对于其在常规流的位置进行定位,且不会影响<br>到兄弟元素.</li>
-<li>设置为absolute时,元素脱离常规流,可以使用top,left,right,bottom相对于最近的设置了position属性(不是static)的祖先<br>元素进行定位.</li>
-<li>设置为fixed时,元素脱离常规流,可以使用top,left,right,bottom相对于屏幕窗口定位.</li>
-</ol>
-<h2 id="二、float"><a href="#二、float" class="headerlink" title="二、float"></a>二、float</h2><ol>
-<li>首先要看元素是否设置了position值,如果元素的position值为absolute或者fixed,float计算后则为”none”.</li>
-<li>如果元素的position值为relative,float的值不为none,那么元素可以根据漂浮后的位置使用left,right,top,bottom进行定位.</li>
-<li>float值有效时,就使元素脱离的常规流,且对display的值有影响.</li>
-</ol>
-<h2 id="三、display"><a href="#三、display" class="headerlink" title="三、display"></a>三、display</h2><ol>
-<li>上述position,float的情况都是基于display不为none时.</li>
-<li>display不为none时,其计算后的值会受到position,float的影响,不会单纯使用手动设置的值</li>
-</ol>
-<p><a href="http://w3help.org/zh-cn/kb/009/" target="_blank" rel="noopener">w3</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/二分法实现repeat/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/28/二分法实现repeat/" itemprop="url">二分法实现repeat</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-28T22:28:17+08:00">2018-02-28</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ig: repeat("nodeJS", 2) -&gt; nodeJSnodeJS</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">repeat</span>(<span class="params">target, n</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> s = target, total = n;</span><br><span class="line">  <span class="keyword">while</span> (n &gt; <span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(n %<span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">      total += s;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>)</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    s += s;</span><br><span class="line">    n = n &gt;&gt; <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> total;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/27/z-index层叠级别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/27/z-index层叠级别/" itemprop="url">z-index层叠级别</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-27T16:04:10+08:00">2018-02-27</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>codepen:</p>
-<ul>
-<li><a href="https://www.w3.org/TR/CSS21/zindex.html" target="_blank" rel="noopener">w3org</a></li>
-<li><a href="http://w3help.org/zh-cn/kb/013/" target="_blank" rel="noopener">层叠级别概述</a></li>
-</ul>
-<p>curl -H ‘:method: POST’ -H ‘:scheme: https’ -H ‘:path: /signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;token=d105e557-a48a-44e7-8339-163592ee097c’ -H ‘:authority: ezone.yonyoucloud.com’ -H ‘cookie: Hm_lvt_hongbao=1500017181,1501028642,1501806219’ -H ‘accept: <em>/</em>‘ -H ‘content-type: application/x-www-form-urlencoded; charset=UTF-8’ -H ‘accept-encoding: br, gzip, deflate’ -H ‘user-agent: esn/5.5.1 (iPhone; iOS 11.2; Scale/3.00)’ -H ‘accept-language: en-CN;q=1, zh-Hans-CN;q=0.9, ja-JP;q=0.8’ -H ‘content-length: 596’ –data-binary “encryptedAttentance=B5696D98991A6A1998ADD3734B54C9E3BA487D918885195633C9A33BF796D0E7276FBA6A76B959D3946D0CFDFFD4AB5BEAEF8B004C11C55B213B5C090CA6E05C62392F2845E89B945302F808BD5AFF78CDBDDB64C98744FE90BF2DA8F6E4C17ED420972FA5A1995C0ADA5B89ACCF118E523CF2DBA1DC9234E3EB73B6A606DFD926B91CD49A9868A5BF715C722BC026425A0537EFB84989A32F815A7619B655E66AD373A593E20BB6E576297387C75896CC3FC99F4C96E16BB8A61315FBA2EBE00797F1F765822F02D11F524D6F9506EBCB10989F8495CC2D0683099A2FBCF6820762EA2EAA9FCCB6F5E07B9B924210C05DF7877479E17A78E095B2EE91ED51F78F1449E777AECB5C305F86C6EE518ABA7F8821544230BFB12F6329B390C293F6” ‘<a href="https://ezone.yonyoucloud.com/signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;token=d105e557-a48a-44e7-8339-163592ee097c" target="_blank" rel="noopener">https://ezone.yonyoucloud.com/signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;token=d105e557-a48a-44e7-8339-163592ee097c</a>‘</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/26/mac常用命令行小工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/26/mac常用命令行小工具/" itemprop="url">mac常用命令行小工具</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-26T13:35:05+08:00">2018-02-26</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h3><p>安装oh-my-zsh后可补充一些常用alias<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 树形显示当前目录的文件信息并忽略node_modules</span><br><span class="line">treen=&apos;tree -I node_modules&apos;</span><br><span class="line"></span><br><span class="line"># git 相关</span><br><span class="line">gam=&apos;git commit -a -m&apos;</span><br><span class="line">gp=&apos;git push&apos;</span><br><span class="line">gpo=&apos;git pull origin master&apos;</span><br></pre></td></tr></table></figure></p>
-<h3 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h3><p>脚本放在<code>/usr/local/bin</code>下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># 在终端发起搜索，打开默认浏览器并用谷歌搜索键入的参数</span></span><br><span class="line">open http://www.google.com/search?q=<span class="string">"$*"</span></span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/21/height百分比计算规则/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/21/height百分比计算规则/" itemprop="url">height百分比计算规则</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-21T21:01:56+08:00">2018-02-21</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="计算规则"><a href="#计算规则" class="headerlink" title="计算规则"></a>计算规则</h3><p><code>height</code>属性值为百分比时：</p>
-<pre><code>+ 基于当前元素的包含块高度;
-+ 如果该包含块高度未指定且该元素的`position`不为`absolute`,height的值转换为`auto`
-+ 根元素root element(通常为html元素)的height百分比基于初始包含块(initial containing block)[https://developer.mozilla.org/en-US/docs/Web/CSS/All_About_The_Containing_Block]
-</code></pre><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height" target="_blank" rel="noopener">height - CSS | MDN</a></li>
-<li><a href="https://www.w3.org/TR/CSS2/visudet.html" target="_blank" rel="noopener">visudet</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/20/MongoDB学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/20/MongoDB学习笔记/" itemprop="url">MongoDB学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-20T20:25:04+08:00">2018-02-20</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://wiki.jikexueyuan.com/project/mongodb/mongodb-php.html" target="_blank" rel="noopener">MongoDB Cook Book</a></p>
-<h3 id="MongoDB-面向文档的数据库，主要面向集合和文档"><a href="#MongoDB-面向文档的数据库，主要面向集合和文档" class="headerlink" title="MongoDB: 面向文档的数据库，主要面向集合和文档"></a>MongoDB: 面向文档的数据库，主要面向集合和文档</h3><ul>
-<li>与关系型数据库相比</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>关系型数据库</th>
-<th>MongoDB</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数据库</td>
-<td>数据库</td>
-</tr>
-<tr>
-<td>表</td>
-<td>集合</td>
-</tr>
-<tr>
-<td>行</td>
-<td>文档</td>
-</tr>
-<tr>
-<td>列</td>
-<td>字段</td>
-</tr>
-<tr>
-<td>表Join</td>
-<td>内嵌文档</td>
-</tr>
-<tr>
-<td>主键</td>
-<td>主键（由 MongoDB 提供的默认 key_id）</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>数据类型</p>
-<ul>
-<li>String</li>
-<li>Integer</li>
-<li>Boolean</li>
-<li>Double</li>
-<li>Array</li>
-<li>Min/Max keys</li>
-<li>Object</li>
-<li>Null</li>
-<li>Date</li>
-<li>Object ID</li>
-<li>Binary Data</li>
-<li>Symbol</li>
-<li>Timestamp</li>
-<li>Code</li>
-<li>Regular expression</li>
-</ul>
+            <ul>
+<li><p>CommonJS</p>
+<p>服务端NodeJS模块规范, 通过<code>require</code>同步加载依赖, 通过<code>exports</code>或<code>module.exports</code>生成模块接口</p>
 </li>
 </ul>
 <ul>
-<li>增删改查<ul>
-<li>create</li>
-<li>insert</li>
-<li>drop</li>
-<li>find<ul>
-<li>where</li>
-<li>AND, OR</li>
-<li>limit, skip</li>
-<li>sort</li>
-</ul>
+<li><p>AMD</p>
+<p>Asynchronous Module Definition,声明模块时指定所有的依赖, 异步加载, 依赖前置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明</span></span><br><span class="line">define(<span class="string">"module"</span>, [<span class="string">"dep1"</span>, <span class="string">"dep2"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">d1, d2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> someExportedValue</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line"><span class="built_in">require</span>([<span class="string">"module"</span>, <span class="string">"../file"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">module, file</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CMD</p>
+<p>Common Module Definition, AMD的依赖延迟加载版</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明</span></span><br><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);</span><br><span class="line">  <span class="keyword">var</span> Spinning = <span class="built_in">require</span>(<span class="string">'./spinning'</span>);</span><br><span class="line">  exports.doSomething = ...</span><br><span class="line">  <span class="built_in">module</span>.exports = ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ES6模块</p>
+<p>引入关键字<code>import</code>, <code>export</code>, <code>module</code>. 在编译时就能确定模块的依赖关系.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"jquery"</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">doStuff</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">module</span> <span class="string">"localModule"</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-</ul>
-<hr>
-<h3 id="Questions"><a href="#Questions" class="headerlink" title="Questions:"></a>Questions:</h3><ul>
-<li>索引</li>
-<li>聚合，分片</li>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a href="http://zhaoda.net/webpack-handbook/module-system.html" target="_blank" rel="noopener">模块系统</a></li>
+<li><a href="http://es6.ruanyifeng.com/#docs/module" target="_blank" rel="noopener">ES6 Module</a></li>
 </ul>
 
           
@@ -1526,7 +536,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/连通图求解最小生成树/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/22/webpack配置开发相关问题集锦/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jane">
@@ -1535,7 +545,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
+      <meta itemprop="name" content="Jane's Notes">
     </span>
 
     
@@ -1545,7 +555,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/19/连通图求解最小生成树/" itemprop="url">连通图求解最小生成树</a></h1>
+                <a class="post-title-link" href="/2018/03/22/webpack配置开发相关问题集锦/" itemprop="url">webpack配置开发相关问题集锦</a></h1>
         
 
         <div class="post-meta">
@@ -1555,9 +565,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">post.posted</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-19T21:08:40+08:00">2018-02-19</time>
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-22T11:09:09+08:00">2018-03-22</time>
             
 
             
@@ -1596,15 +606,992 @@
       
         
           
-            <h3 id="连通图求解最小生成树的普林姆-prim-算法和克鲁斯卡尔-kruskal-算法之JavaScript实现"><a href="#连通图求解最小生成树的普林姆-prim-算法和克鲁斯卡尔-kruskal-算法之JavaScript实现" class="headerlink" title="连通图求解最小生成树的普林姆(prim)算法和克鲁斯卡尔(kruskal)算法之JavaScript实现"></a>连通图求解最小生成树的普林姆(prim)算法和克鲁斯卡尔(kruskal)算法之JavaScript实现</h3><p>最近在看<a href="https://item.jd.com/10663703.html" target="_blank" rel="noopener">《大话数据结构》</a>，图的算法。书中用C语言讲解的，下面用JavaScript实现普林姆(prim)算法和克鲁斯卡尔(kruskal)算法求解连通网的最小生成树</p>
+            <p>收集整理项目开发中, webpack配置的相关问题</p>
 <ul>
-<li>普林姆(prim)算法</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普林姆算法寻找连通网的最小生成树</span></span><br><span class="line"><span class="keyword">const</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>)</span><br><span class="line"><span class="comment">// 图的邻接矩阵</span></span><br><span class="line"><span class="keyword">const</span> G_0 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">10</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">11</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="number">10</span>, <span class="number">0</span>, <span class="number">18</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">16</span>, <span class="literal">Infinity</span>, <span class="number">12</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">18</span>, <span class="number">0</span>, <span class="number">22</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">8</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">22</span>, <span class="number">0</span>, <span class="number">20</span>, <span class="literal">Infinity</span>, <span class="number">24</span>, <span class="number">16</span>, <span class="number">21</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">26</span>, <span class="literal">Infinity</span>, <span class="number">7</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="number">11</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">26</span>, <span class="number">0</span>, <span class="number">17</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">16</span>, <span class="literal">Infinity</span>, <span class="number">24</span>, <span class="literal">Infinity</span>, <span class="number">17</span>, <span class="number">0</span>, <span class="number">19</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">16</span>, <span class="number">7</span>, <span class="literal">Infinity</span>, <span class="number">19</span>, <span class="number">0</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">21</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">0</span>],</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prim</span>(<span class="params">G</span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span></span><br><span class="line">  <span class="comment">// 初始化: 从下标为0的顶点开始计算, lowcost存入0到其他顶点的权重</span></span><br><span class="line">  <span class="keyword">let</span> lowcost = G[<span class="number">0</span>], len = G.length, adjvex = _.times(len, () =&gt; <span class="number">0</span>)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> min = <span class="literal">Infinity</span>, j = <span class="number">1</span>, k = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> (j &lt; len) &#123;</span><br><span class="line">      <span class="comment">// 寻找当前顶点到未加入生成树顶点中的最小权重</span></span><br><span class="line">      <span class="keyword">if</span> (lowcost[j] != <span class="number">0</span> &amp;&amp; lowcost[j] &lt; min) &#123;</span><br><span class="line">        min = lowcost[j]</span><br><span class="line">        k = j</span><br><span class="line">      &#125;</span><br><span class="line">      j++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 打印当前寻到的最小边</span></span><br><span class="line">    <span class="built_in">console</span>.log(adjvex[k], k)</span><br><span class="line">    <span class="comment">// 设置第k个点为已加入生成树</span></span><br><span class="line">    lowcost[k] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 比较第k个点到其他未加入生成树顶点的权重与之前已加入顶点到所有点的权重</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> m = <span class="number">1</span>; m &lt; len; m++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (lowcost[m] != <span class="number">0</span> &amp;&amp; G[k][m] &lt; lowcost[m])&#123;</span><br><span class="line"></span><br><span class="line">        lowcost[m] = G[k][m]</span><br><span class="line">        adjvex[m] = k</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">prim(G_0)</span><br></pre></td></tr></table></figure>
+<li><p>文件路径名在不同操作系统大小写的问题</p>
 <ul>
-<li>克鲁斯卡尔(kruskal)算法</li>
+<li>原因: 有的操作系统对于文件路径大小写敏感, 有的不敏感, 导致webpack报错. windows和macOS大小写不敏感, 其他类unix的系统大小写敏感.</li>
+<li>解决办法: develop环境引入<a href="https://github.com/Urthen/case-sensitive-paths-webpack-plugin" target="_blank" rel="noopener">case-sensitive-paths-webpack-plugin</a>, 强制规范模块命名的书写, 引用。</li>
+<li>具体原理: 比较文件路径的大小写是否与引用时一致, 不一致的时候报错。保证整个开发流程是大小写敏感, 引用正确。</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by janeluck on 17/7/11.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 克鲁斯卡尔算法寻找连通网的最小生成树</span></span><br><span class="line"><span class="keyword">const</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>)</span><br><span class="line"><span class="comment">// 图的邻接矩阵</span></span><br><span class="line"><span class="keyword">const</span> G_0 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">10</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">11</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="number">10</span>, <span class="number">0</span>, <span class="number">18</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">16</span>, <span class="literal">Infinity</span>, <span class="number">12</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">18</span>, <span class="number">0</span>, <span class="number">22</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">8</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">22</span>, <span class="number">0</span>, <span class="number">20</span>, <span class="literal">Infinity</span>, <span class="number">24</span>, <span class="number">16</span>, <span class="number">21</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">26</span>, <span class="literal">Infinity</span>, <span class="number">7</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="number">11</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">26</span>, <span class="number">0</span>, <span class="number">17</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">16</span>, <span class="literal">Infinity</span>, <span class="number">24</span>, <span class="literal">Infinity</span>, <span class="number">17</span>, <span class="number">0</span>, <span class="number">19</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">16</span>, <span class="number">7</span>, <span class="literal">Infinity</span>, <span class="number">19</span>, <span class="number">0</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">21</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">0</span>],</span><br><span class="line">]</span><br><span class="line"><span class="comment">// 生成权值从小到大的边集数组</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateEdge</span>(<span class="params">G</span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span></span><br><span class="line">  <span class="keyword">let</span> edge = [], len = G.length</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">      <span class="comment">// 排除不存在的边</span></span><br><span class="line">      <span class="keyword">if</span> (G[i][j] !== <span class="literal">Infinity</span>) &#123;</span><br><span class="line">        edge.push(&#123;</span><br><span class="line">          <span class="string">'begin'</span>: i,</span><br><span class="line">          <span class="string">'end'</span>: j,</span><br><span class="line">          <span class="string">'weight'</span>: G[i][j]</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _.sortBy(edge, <span class="string">'weight'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">kruskal</span>(<span class="params">G</span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span></span><br><span class="line">  <span class="keyword">const</span> edge = generateEdge(G), find = <span class="function"><span class="keyword">function</span> (<span class="params">parent, f</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (parent[f] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      f = parent[f]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> f</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> parent = _.times(G.length, () =&gt; <span class="number">0</span>)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; edge.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> n = find(parent, edge[i][<span class="string">'begin'</span>]), m = find(parent, edge[i][<span class="string">'end'</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment">// n与m不等, 索命此边没有与现有生成树形成环路</span></span><br><span class="line">    <span class="keyword">if</span> (n !== m) &#123;</span><br><span class="line">      <span class="comment">// 将此边的结尾顶点放入下标为该起点的parant中</span></span><br><span class="line">      parent[n] = m</span><br><span class="line">      <span class="comment">// 打印当前寻到的最小边</span></span><br><span class="line">      <span class="built_in">console</span>.log(edge[i])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">kruskal(G_0)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>alias<br>  开发中可以简写某个目录文件路径, 不用总写相对路径, 尤其适合自定义模块的引用。<br>  <code>webpack</code>的config添加配置为:</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    resolve: &#123;</span><br><span class="line"></span><br><span class="line">        alias: &#123;</span><br><span class="line">            src: path.resolve(__dirname, <span class="string">'./src'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  使用babel的可以引入插件<a href="https://github.com/tleunen/babel-plugin-module-resolver#readme" target="_blank" rel="noopener">babel-plugin-module-resolver</a><br>  <code>.babelrc</code>配置如下</p>
+  <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"plugins"</span>: [</span><br><span class="line">        [</span><br><span class="line">            <span class="string">"module-resolver"</span>,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"alias"</span>: &#123;</span><br><span class="line">                    <span class="attr">"src"</span>: <span class="string">"./src"</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>全局引用<br><a href="https://webpack.js.org/plugins/provide-plugin/" target="_blank" rel="noopener">provide-plugin</a></p>
+</li>
+<li><p>动态加载<br><a href="https://webpack.js.org/guides/code-splitting/#dynamic-imports" target="_blank" rel="noopener">dynamic-imports</a><br>使用<code>react-loadable</code>封装需要动态加载的组件, 并指定编译后的文件名</p>
+<ol>
+<li><p>封装</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Loadable <span class="keyword">from</span> <span class="string">'react-loadable'</span></span><br><span class="line"><span class="keyword">import</span> Loading <span class="keyword">from</span> <span class="string">'./Loading'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> AsyncEchartsForReact = Loadable(&#123;</span><br><span class="line">  <span class="comment">// 'echarts-for-react' 为需要动态加载使用的组件</span></span><br><span class="line">  <span class="comment">// webpackChunkName指定编译后的文件名</span></span><br><span class="line">  loader: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "echarts-for-react" */</span> <span class="string">'echarts-for-react'</span>),</span><br><span class="line">  loading: Loading,</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> AsyncEchartsForReact</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 弃用直接引用</span></span><br><span class="line"><span class="comment">// import  ReactEcharts from 'echarts-for-react'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 引入封装过的组件</span></span><br><span class="line"><span class="keyword">import</span>  ReactEcharts <span class="keyword">from</span> <span class="string">'...path/AsyncEchartsForReact'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Loading组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">Loading</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (props.isLoading) &#123;</span><br><span class="line">      <span class="keyword">if</span> (props.timedOut) &#123;</span><br><span class="line">      <span class="keyword">return</span> &lt;div&gt;Loader timed out!&lt;/div&gt;;</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (props.pastDelay) &#123;</span><br><span class="line">          <span class="keyword">return</span> &lt;div&gt;Loading...&lt;/div&gt;;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (props.error) &#123;</span><br><span class="line">      <span class="keyword">return</span> &lt;div&gt;Error! Component failed to load&lt;/div&gt;;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<!-- - webpack编译的时候 ctrl+c没用 kill -9 -->
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a href="https://en.wikipedia.org/wiki/Filename#Letter_case_preservation" target="_blank" rel="noopener">文件命名大小写.维基百科</a></li>
+<li><a href="https://webpack.js.org/configuration/resolve/" target="_blank" rel="noopener">webpack.alias</a></li>
+<li><a href="https://reacttraining.com/react-router/web/guides/code-splitting" target="_blank" rel="noopener">react-router/code-spliting</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/22/JavaScript开发浏览器报错Tips/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/22/JavaScript开发浏览器报错Tips/" itemprop="url">JavaScript开发浏览器报错Tips</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-22T10:34:09+08:00">2018-03-22</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>陆续收集一些不常见的浏览器报错</p>
+<p>Q: “Uncaught TypeError: Illegal invocation” in Chrome<br>A: 自定义对象里面写入了window原生的方法, 会导致报这个错误. 原生方法执行要求的上下文环境是<code>window</code>.<br>L: <a href="https://stackoverflow.com/questions/9677985/uncaught-typeerror-illegal-invocation-in-chrome" target="_blank" rel="noopener">stackoverflow</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before:</span></span><br><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">  myAlert : alert <span class="comment">//copying native alert to an object</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// after:</span></span><br><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">  myAlert : alert.bind(<span class="built_in">window</span>) <span class="comment">//copying native alert to an object</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/20/JS键盘快捷键/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/20/JS键盘快捷键/" itemprop="url">JS键盘快捷键</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-20T19:42:05+08:00">2018-03-20</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/19/项目开发中npm依赖版本管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/19/项目开发中npm依赖版本管理/" itemprop="url">项目开发中npm依赖版本管理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-19T16:23:27+08:00">2018-03-19</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>项目开发中, 锁定依赖包的版本。</p>
+<p>npm5之后可以记录<code>package-lock.json</code>文件. <code>npm publish</code>时请不要提交该文件。</p>
+<p>npm3可使用<code>npm shrinkwrap</code>生成<code>npm-shrinkwrap.json</code>文件</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="https://docs.npmjs.com/files/package-lock.json" target="_blank" rel="noopener">Npm Official</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/17/Nodejs安装和版本管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/17/Nodejs安装和版本管理/" itemprop="url">Nodejs安装和版本管理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-17T15:44:52+08:00">2018-03-17</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>为每个项目指定运行的Node版本</p>
+<h2 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a>nvm</h2><ol>
+<li><p>安装<code>nvm</code>, 用于下载和管理NodeJS的版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用nvm安装需要的版本, 下面是常用的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install [version]</span><br><span class="line"></span><br><span class="line">$ nvm use [version]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看已安装的版本信息</span></span><br><span class="line">$ nvm ls</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可编写<code>.nvmrc</code>文件, 为当前目录指定版本, cd到该目录时运行<code>npm use</code></p>
+</li>
+</ol>
+<h2 id="avn"><a href="#avn" class="headerlink" title="avn"></a>avn</h2><p>只用nvm, 不编写工具的话, 每次进入项目目录都需要激活, 非常不便利。可以使用<code>avn</code>, 解决这个问题</p>
+<ol>
+<li><p>安装<code>avn</code>, 为每个项目自动切换NodeJS版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g avn avn-nvm</span><br><span class="line">$ avn setup</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在项目目录下, 编写<code>.node-version</code>, 指定使用版本, 编写规则遵循<a href="https://semver.org/" target="_blank" rel="noopener">semver</a></p>
+</li>
+</ol>
+<h2 id="指定版本下升级npm"><a href="#指定版本下升级npm" class="headerlink" title="指定版本下升级npm"></a>指定版本下升级npm</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.nvm/versions/node/v7.10.1/lib</span><br><span class="line">$ npm install npm</span><br></pre></td></tr></table></figure>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a> - Node Version Manager.</li>
+<li><a href="https://github.com/wbyoung/avn" target="_blank" rel="noopener">avn</a> - Automatic Version Switching for Node.</li>
+<li><a href="https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/" target="_blank" rel="noopener">Installing Multiple Versions of Node.js Using nvm</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/17/vim常用命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/17/vim常用命令/" itemprop="url">vim常用命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-17T12:31:06+08:00">2018-03-17</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>常用命令总结</p>
+<h3 id="可视模式"><a href="#可视模式" class="headerlink" title="可视模式"></a>可视模式</h3><ul>
+<li>常规移动<ul>
+<li>h: ←</li>
+<li>j: ↓</li>
+<li>k: ↑</li>
+<li>l: →</li>
+</ul>
+</li>
+<li>单词移动<ul>
+<li>w: word</li>
+<li>b: beginning</li>
+<li>e: end</li>
+</ul>
+</li>
+<li>倍数组合移动<ul>
+<li>3w</li>
+<li>2j</li>
+</ul>
+</li>
+<li>行首尾<ul>
+<li>0</li>
+<li>$</li>
+</ul>
+</li>
+<li>页首尾<ul>
+<li>gg</li>
+<li>G</li>
+</ul>
+</li>
+</ul>
+<h3 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h3>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/从零写一个Promise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/14/从零写一个Promise/" itemprop="url">从零写一个Promise</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-14T20:35:01+08:00">2018-03-14</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a href="https://juejin.im/post/5abb6cce5188255c3200c842" target="_blank" rel="noopener">从零实现promise</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/13/常用的unix命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/13/常用的unix命令/" itemprop="url">常用的unix命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">post.posted</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-13T19:55:25+08:00">2018-03-13</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>找出匹配的文件并批量执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find ./images/scrm/leftNav -iname &apos;._*.png&apos; -exec rm &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查找目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find ./ -name [directoryname] -type d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在指定目录下查找字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep -r [string] [path]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在服务器之间拷贝文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ scp -P [port]  [file]    [user]@[address]:[path]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从终端输入并写到指定文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat &gt; [filename]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看项目里npm依赖版本号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm list --depth=0 |grep [name]</span><br></pre></td></tr></table></figure></li>
+</ul>
+
           
         
       
@@ -1693,8 +1680,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">state.posts</span>
                   </a>
                 </div>
               
@@ -1730,8 +1717,12 @@
                     
                       
                     
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">tags</span>
+                    <span class="site-state-item-name">state.tags</span>
                   </a>
                 </div>
               
@@ -1793,7 +1784,7 @@
 
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">footer.powered</div>
 
 
 
@@ -1801,7 +1792,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
+  <div class="theme-info">footer.theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
 
 
 

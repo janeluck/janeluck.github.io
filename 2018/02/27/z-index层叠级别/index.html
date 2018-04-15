@@ -103,17 +103,20 @@
   <meta name="keywords" content="Css," />
 
 
-<meta name="description" content="codepen:  w3org 层叠级别概述  curl -H ‘:method: POST’ -H ‘:scheme: https’ -H ‘:path: /signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;amp;token=d105e557-a48a-44e7-8339-163592ee097c’ -H ‘:authority: ezon">
+<meta name="description" content="z-index只适用于定位元素, 不可继承, 计算值同设定值。  该值指定了元素在当前层叠上下文中的层叠级别 同时生成一个局部层叠上下文  层叠规则 形成层叠上下文的元素的背景和边框 层叠级别为负值的后代层叠上下文 常规流内非行内非定位的子元素组成的层 非定位的浮动子元素和他们的内容组成的层 常规流内行内非定位子元素组成的层 任何z-index是auto的定位子元素， 以及z-index是0的层叠">
 <meta name="keywords" content="Css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="z-index层叠级别">
 <meta property="og:url" content="http://yoursite.com/2018/02/27/z-index层叠级别/index.html">
-<meta property="og:site_name" content="Jane&#39;s Blog">
-<meta property="og:description" content="codepen:  w3org 层叠级别概述  curl -H ‘:method: POST’ -H ‘:scheme: https’ -H ‘:path: /signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;amp;token=d105e557-a48a-44e7-8339-163592ee097c’ -H ‘:authority: ezon">
-<meta property="og:updated_time" content="2018-03-07T11:04:52.758Z">
+<meta property="og:site_name" content="Jane&#39;s Notes">
+<meta property="og:description" content="z-index只适用于定位元素, 不可继承, 计算值同设定值。  该值指定了元素在当前层叠上下文中的层叠级别 同时生成一个局部层叠上下文  层叠规则 形成层叠上下文的元素的背景和边框 层叠级别为负值的后代层叠上下文 常规流内非行内非定位的子元素组成的层 非定位的浮动子元素和他们的内容组成的层 常规流内行内非定位子元素组成的层 任何z-index是auto的定位子元素， 以及z-index是0的层叠">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/uploads/stacklevel.png">
+<meta property="og:updated_time" content="2018-03-12T11:15:06.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="z-index层叠级别">
-<meta name="twitter:description" content="codepen:  w3org 层叠级别概述  curl -H ‘:method: POST’ -H ‘:scheme: https’ -H ‘:path: /signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;amp;token=d105e557-a48a-44e7-8339-163592ee097c’ -H ‘:authority: ezon">
+<meta name="twitter:description" content="z-index只适用于定位元素, 不可继承, 计算值同设定值。  该值指定了元素在当前层叠上下文中的层叠级别 同时生成一个局部层叠上下文  层叠规则 形成层叠上下文的元素的背景和边框 层叠级别为负值的后代层叠上下文 常规流内非行内非定位的子元素组成的层 非定位的浮动子元素和他们的内容组成的层 常规流内行内非定位子元素组成的层 任何z-index是auto的定位子元素， 以及z-index是0的层叠">
+<meta name="twitter:image" content="http://yoursite.com/uploads/stacklevel.png">
 
 
 
@@ -129,7 +132,7 @@
     sidebar: "",
   };
 </script>
-  <title>z-index层叠级别 | Jane's Blog</title>
+  <title>z-index层叠级别 | Jane's Notes</title>
   
 
 
@@ -169,7 +172,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
   
@@ -187,7 +190,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Jane's Blog</span>
+        <span class="site-title">Jane's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -214,19 +217,19 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />archives</a>
         </li>
       
 
@@ -279,7 +282,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
+      <meta itemprop="name" content="Jane's Notes">
     </span>
 
     
@@ -297,9 +300,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">post.posted</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-27T16:04:10+08:00">2018-02-27</time>
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-27T16:04:10+08:00">2018-02-27</time>
             
 
             
@@ -336,12 +339,33 @@
       
 
       
-        <p>codepen:</p>
+        <h3 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index<integer></integer></h3><p>只适用于定位元素, 不可继承, 计算值同设定值。</p>
 <ul>
+<li>该值指定了元素在当前层叠上下文中的层叠级别</li>
+<li>同时生成一个局部层叠上下文</li>
+</ul>
+<h3 id="层叠规则"><a href="#层叠规则" class="headerlink" title="层叠规则"></a>层叠规则</h3><ol>
+<li>形成层叠上下文的元素的背景和边框</li>
+<li>层叠级别为负值的后代层叠上下文</li>
+<li>常规流内非行内非定位的子元素组成的层</li>
+<li>非定位的浮动子元素和他们的内容组成的层</li>
+<li>常规流内行内非定位子元素组成的层</li>
+<li>任何z-index是auto的定位子元素， 以及z-index是0的层叠上下文组成的层</li>
+<li>层叠级别为正值的后代层叠上下文</li>
+</ol>
+<p><img src="/uploads/stacklevel.png" alt=""></p>
+<h4 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h4><ul>
+<li>最初的层叠上下文是<code>root Element</code></li>
+<li>codepen:  <p data-height="265" data-theme-id="0" data-slug-hash="jzPpdP" data-default-tab="html,result" data-user="janeluck" data-embed-version="2" data-pen-title="z-index" class="codepen">See the Pen <a href="https://codepen.io/janeluck/pen/jzPpdP/" target="_blank" rel="noopener">z-index</a> by janeluck (<a href="https://codepen.io/janeluck" target="_blank" rel="noopener">@janeluck</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</p><script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+</li>
+</ul>
+<h4 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h4><ul>
 <li><a href="https://www.w3.org/TR/CSS21/zindex.html" target="_blank" rel="noopener">w3org</a></li>
 <li><a href="http://w3help.org/zh-cn/kb/013/" target="_blank" rel="noopener">层叠级别概述</a></li>
 </ul>
-<p>curl -H ‘:method: POST’ -H ‘:scheme: https’ -H ‘:path: /signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;token=d105e557-a48a-44e7-8339-163592ee097c’ -H ‘:authority: ezone.yonyoucloud.com’ -H ‘cookie: Hm_lvt_hongbao=1500017181,1501028642,1501806219’ -H ‘accept: <em>/</em>‘ -H ‘content-type: application/x-www-form-urlencoded; charset=UTF-8’ -H ‘accept-encoding: br, gzip, deflate’ -H ‘user-agent: esn/5.5.1 (iPhone; iOS 11.2; Scale/3.00)’ -H ‘accept-language: en-CN;q=1, zh-Hans-CN;q=0.9, ja-JP;q=0.8’ -H ‘content-length: 596’ –data-binary “encryptedAttentance=B5696D98991A6A1998ADD3734B54C9E3BA487D918885195633C9A33BF796D0E7276FBA6A76B959D3946D0CFDFFD4AB5BEAEF8B004C11C55B213B5C090CA6E05C62392F2845E89B945302F808BD5AFF78CDBDDB64C98744FE90BF2DA8F6E4C17ED420972FA5A1995C0ADA5B89ACCF118E523CF2DBA1DC9234E3EB73B6A606DFD926B91CD49A9868A5BF715C722BC026425A0537EFB84989A32F815A7619B655E66AD373A593E20BB6E576297387C75896CC3FC99F4C96E16BB8A61315FBA2EBE00797F1F765822F02D11F524D6F9506EBCB10989F8495CC2D0683099A2FBCF6820762EA2EAA9FCCB6F5E07B9B924210C05DF7877479E17A78E095B2EE91ED51F78F1449E777AECB5C305F86C6EE518ABA7F8821544230BFB12F6329B390C293F6” ‘<a href="https://ezone.yonyoucloud.com/signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;token=d105e557-a48a-44e7-8339-163592ee097c" target="_blank" rel="noopener">https://ezone.yonyoucloud.com/signin/attentance/encryptSignIn?clientV=2-5.5.1-1-1&amp;token=d105e557-a48a-44e7-8339-163592ee097c</a>‘</p>
 
       
     </div>
@@ -436,8 +460,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            sidebar.toc
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            sidebar.overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -456,8 +489,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">state.posts</span>
                   </a>
                 </div>
               
@@ -493,8 +526,12 @@
                     
                       
                     
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">tags</span>
+                    <span class="site-state-item-name">state.tags</span>
                   </a>
                 </div>
               
@@ -529,6 +566,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#z-index"><span class="nav-number">1.</span> <span class="nav-text">z-index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#层叠规则"><span class="nav-number">2.</span> <span class="nav-text">层叠规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#附注"><span class="nav-number">2.1.</span> <span class="nav-text">附注</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考链接："><span class="nav-number">2.2.</span> <span class="nav-text">参考链接：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -556,7 +609,7 @@
 
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">footer.powered</div>
 
 
 
@@ -564,7 +617,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
+  <div class="theme-info">footer.theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
 
 
 

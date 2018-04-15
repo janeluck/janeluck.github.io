@@ -103,17 +103,18 @@
   <meta name="keywords" content="Git," />
 
 
-<meta name="description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat  git diff HEAD~ HEAD">
+<meta name="description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat git log –stat –author=”jane” git diff HEAD~ HEAD  git stash  git stash pop  gi">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用命令">
 <meta property="og:url" content="http://yoursite.com/2018/02/11/git常用命令/index.html">
-<meta property="og:site_name" content="Jane&#39;s Blog">
-<meta property="og:description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat  git diff HEAD~ HEAD">
-<meta property="og:updated_time" content="2018-02-20T12:26:50.266Z">
+<meta property="og:site_name" content="Jane&#39;s Notes">
+<meta property="og:description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat git log –stat –author=”jane” git diff HEAD~ HEAD  git stash  git stash pop  gi">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-10T13:50:56.475Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令">
-<meta name="twitter:description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat  git diff HEAD~ HEAD">
+<meta name="twitter:description" content="git fetch git pull git pull origin master  git merge  git remote -v  git remote add [name] [url]  git log  git log –stat git log –stat –author=”jane” git diff HEAD~ HEAD  git stash  git stash pop  gi">
 
 
 
@@ -129,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>git常用命令 | Jane's Blog</title>
+  <title>git常用命令 | Jane's Notes</title>
   
 
 
@@ -169,7 +170,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
   
@@ -187,7 +188,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Jane's Blog</span>
+        <span class="site-title">Jane's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -214,19 +215,19 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />archives</a>
         </li>
       
 
@@ -279,7 +280,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Blog">
+      <meta itemprop="name" content="Jane's Notes">
     </span>
 
     
@@ -297,9 +298,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">post.posted</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-11T08:20:38+08:00">2018-02-11</time>
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-11T08:20:38+08:00">2018-02-11</time>
             
 
             
@@ -349,10 +350,24 @@
 </li>
 <li><p>git log</p>
 </li>
-<li><p>git log –stat</p>
-</li>
+<li>git log –stat</li>
+<li>git log –stat –author=”jane”</li>
 <li><p>git diff HEAD~ HEAD</p>
 </li>
+<li><p>git stash</p>
+</li>
+<li><p>git stash pop</p>
+</li>
+<li><p>git archive –format zip –output /full/path/to/zipfile.zip master</p>
+</li>
+<li>git config core.ignorecase false</li>
+<li>git merge -X theirs origin/master</li>
+<li>git remote update origin  –prune 更新本地的远程分支列表</li>
+<li>git cherry-pick  commithash  只合并某一次提交</li>
+</ul>
+<ul>
+<li>git checkout tags/<tag-name> -b <branch-name></branch-name></tag-name></li>
+<li>git tag -l</li>
 </ul>
 
       
@@ -387,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/02/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/08/30/金额处理生成器/" rel="next" title="金额处理生成器">
+                <i class="fa fa-chevron-left"></i> 金额处理生成器
               </a>
             
           </div>
@@ -468,8 +483,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">22</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">state.posts</span>
                   </a>
                 </div>
               
@@ -505,8 +520,12 @@
                     
                       
                     
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">tags</span>
+                    <span class="site-state-item-name">state.tags</span>
                   </a>
                 </div>
               
@@ -568,7 +587,7 @@
 
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">footer.powered</div>
 
 
 
@@ -576,7 +595,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
+  <div class="theme-info">footer.theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
 
 
 
