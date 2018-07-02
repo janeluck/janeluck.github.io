@@ -107,7 +107,6 @@
 <meta property="og:title" content="Jane&#39;s Notes">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="Jane&#39;s Notes">
-<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jane&#39;s Notes">
 
@@ -165,7 +164,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
 
   
   
@@ -211,19 +210,19 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />home</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />tags</a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />archives</a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
         </li>
       
 
@@ -251,6 +250,501 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/20/MongoDB学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/20/MongoDB学习笔记/" itemprop="url">MongoDB学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-20T20:25:04+08:00">2018-02-20</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://wiki.jikexueyuan.com/project/mongodb/mongodb-php.html" target="_blank" rel="noopener">MongoDB Cook Book</a></p>
+<h3 id="MongoDB-面向文档的数据库，主要面向集合和文档"><a href="#MongoDB-面向文档的数据库，主要面向集合和文档" class="headerlink" title="MongoDB: 面向文档的数据库，主要面向集合和文档"></a>MongoDB: 面向文档的数据库，主要面向集合和文档</h3><ul>
+<li>与关系型数据库相比</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>关系型数据库</th>
+<th>MongoDB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据库</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>表</td>
+<td>集合</td>
+</tr>
+<tr>
+<td>行</td>
+<td>文档</td>
+</tr>
+<tr>
+<td>列</td>
+<td>字段</td>
+</tr>
+<tr>
+<td>表Join</td>
+<td>内嵌文档</td>
+</tr>
+<tr>
+<td>主键</td>
+<td>主键（由 MongoDB 提供的默认 key_id）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>数据类型</p>
+<ul>
+<li>String</li>
+<li>Integer</li>
+<li>Boolean</li>
+<li>Double</li>
+<li>Array</li>
+<li>Min/Max keys</li>
+<li>Object</li>
+<li>Null</li>
+<li>Date</li>
+<li>Object ID</li>
+<li>Binary Data</li>
+<li>Symbol</li>
+<li>Timestamp</li>
+<li>Code</li>
+<li>Regular expression</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>增删改查<ul>
+<li>create</li>
+<li>insert</li>
+<li>drop</li>
+<li>find<ul>
+<li>where</li>
+<li>AND, OR</li>
+<li>limit, skip</li>
+<li>sort</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Questions"><a href="#Questions" class="headerlink" title="Questions:"></a>Questions:</h3><ul>
+<li>索引</li>
+<li>聚合，分片</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/连通图求解最小生成树/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/19/连通图求解最小生成树/" itemprop="url">连通图求解最小生成树</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-19T21:08:40+08:00">2018-02-19</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="连通图求解最小生成树的普林姆-prim-算法和克鲁斯卡尔-kruskal-算法之JavaScript实现"><a href="#连通图求解最小生成树的普林姆-prim-算法和克鲁斯卡尔-kruskal-算法之JavaScript实现" class="headerlink" title="连通图求解最小生成树的普林姆(prim)算法和克鲁斯卡尔(kruskal)算法之JavaScript实现"></a>连通图求解最小生成树的普林姆(prim)算法和克鲁斯卡尔(kruskal)算法之JavaScript实现</h3><p>最近在看<a href="https://item.jd.com/10663703.html" target="_blank" rel="noopener">《大话数据结构》</a>，图的算法。书中用C语言讲解的，下面用JavaScript实现普林姆(prim)算法和克鲁斯卡尔(kruskal)算法求解连通网的最小生成树</p>
+<ul>
+<li>普林姆(prim)算法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普林姆算法寻找连通网的最小生成树</span></span><br><span class="line"><span class="keyword">const</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>)</span><br><span class="line"><span class="comment">// 图的邻接矩阵</span></span><br><span class="line"><span class="keyword">const</span> G_0 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">10</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">11</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="number">10</span>, <span class="number">0</span>, <span class="number">18</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">16</span>, <span class="literal">Infinity</span>, <span class="number">12</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">18</span>, <span class="number">0</span>, <span class="number">22</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">8</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">22</span>, <span class="number">0</span>, <span class="number">20</span>, <span class="literal">Infinity</span>, <span class="number">24</span>, <span class="number">16</span>, <span class="number">21</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">26</span>, <span class="literal">Infinity</span>, <span class="number">7</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="number">11</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">26</span>, <span class="number">0</span>, <span class="number">17</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">16</span>, <span class="literal">Infinity</span>, <span class="number">24</span>, <span class="literal">Infinity</span>, <span class="number">17</span>, <span class="number">0</span>, <span class="number">19</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">16</span>, <span class="number">7</span>, <span class="literal">Infinity</span>, <span class="number">19</span>, <span class="number">0</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">21</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">0</span>],</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prim</span>(<span class="params">G</span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span></span><br><span class="line">  <span class="comment">// 初始化: 从下标为0的顶点开始计算, lowcost存入0到其他顶点的权重</span></span><br><span class="line">  <span class="keyword">let</span> lowcost = G[<span class="number">0</span>], len = G.length, adjvex = _.times(len, () =&gt; <span class="number">0</span>)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> min = <span class="literal">Infinity</span>, j = <span class="number">1</span>, k = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> (j &lt; len) &#123;</span><br><span class="line">      <span class="comment">// 寻找当前顶点到未加入生成树顶点中的最小权重</span></span><br><span class="line">      <span class="keyword">if</span> (lowcost[j] != <span class="number">0</span> &amp;&amp; lowcost[j] &lt; min) &#123;</span><br><span class="line">        min = lowcost[j]</span><br><span class="line">        k = j</span><br><span class="line">      &#125;</span><br><span class="line">      j++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 打印当前寻到的最小边</span></span><br><span class="line">    <span class="built_in">console</span>.log(adjvex[k], k)</span><br><span class="line">    <span class="comment">// 设置第k个点为已加入生成树</span></span><br><span class="line">    lowcost[k] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 比较第k个点到其他未加入生成树顶点的权重与之前已加入顶点到所有点的权重</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> m = <span class="number">1</span>; m &lt; len; m++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (lowcost[m] != <span class="number">0</span> &amp;&amp; G[k][m] &lt; lowcost[m])&#123;</span><br><span class="line"></span><br><span class="line">        lowcost[m] = G[k][m]</span><br><span class="line">        adjvex[m] = k</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">prim(G_0)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>克鲁斯卡尔(kruskal)算法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by janeluck on 17/7/11.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 克鲁斯卡尔算法寻找连通网的最小生成树</span></span><br><span class="line"><span class="keyword">const</span> _ = <span class="built_in">require</span>(<span class="string">'lodash'</span>)</span><br><span class="line"><span class="comment">// 图的邻接矩阵</span></span><br><span class="line"><span class="keyword">const</span> G_0 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">10</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">11</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="number">10</span>, <span class="number">0</span>, <span class="number">18</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">16</span>, <span class="literal">Infinity</span>, <span class="number">12</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">18</span>, <span class="number">0</span>, <span class="number">22</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">8</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">22</span>, <span class="number">0</span>, <span class="number">20</span>, <span class="literal">Infinity</span>, <span class="number">24</span>, <span class="number">16</span>, <span class="number">21</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="number">26</span>, <span class="literal">Infinity</span>, <span class="number">7</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="number">11</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">26</span>, <span class="number">0</span>, <span class="number">17</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">16</span>, <span class="literal">Infinity</span>, <span class="number">24</span>, <span class="literal">Infinity</span>, <span class="number">17</span>, <span class="number">0</span>, <span class="number">19</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">16</span>, <span class="number">7</span>, <span class="literal">Infinity</span>, <span class="number">19</span>, <span class="number">0</span>, <span class="literal">Infinity</span>],</span><br><span class="line">  [<span class="literal">Infinity</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">21</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="literal">Infinity</span>, <span class="number">0</span>],</span><br><span class="line">]</span><br><span class="line"><span class="comment">// 生成权值从小到大的边集数组</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateEdge</span>(<span class="params">G</span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span></span><br><span class="line">  <span class="keyword">let</span> edge = [], len = G.length</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">      <span class="comment">// 排除不存在的边</span></span><br><span class="line">      <span class="keyword">if</span> (G[i][j] !== <span class="literal">Infinity</span>) &#123;</span><br><span class="line">        edge.push(&#123;</span><br><span class="line">          <span class="string">'begin'</span>: i,</span><br><span class="line">          <span class="string">'end'</span>: j,</span><br><span class="line">          <span class="string">'weight'</span>: G[i][j]</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> _.sortBy(edge, <span class="string">'weight'</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">kruskal</span>(<span class="params">G</span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span></span><br><span class="line">  <span class="keyword">const</span> edge = generateEdge(G), find = <span class="function"><span class="keyword">function</span> (<span class="params">parent, f</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (parent[f] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      f = parent[f]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> f</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> parent = _.times(G.length, () =&gt; <span class="number">0</span>)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; edge.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> n = find(parent, edge[i][<span class="string">'begin'</span>]), m = find(parent, edge[i][<span class="string">'end'</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment">// n与m不等, 索命此边没有与现有生成树形成环路</span></span><br><span class="line">    <span class="keyword">if</span> (n !== m) &#123;</span><br><span class="line">      <span class="comment">// 将此边的结尾顶点放入下标为该起点的parant中</span></span><br><span class="line">      parent[n] = m</span><br><span class="line">      <span class="comment">// 打印当前寻到的最小边</span></span><br><span class="line">      <span class="built_in">console</span>.log(edge[i])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">kruskal(G_0)</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/JavaScript对象相等性判断/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/19/JavaScript对象相等性判断/" itemprop="url">JavaScript对象相等性判断</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-19T21:07:25+08:00">2018-02-19</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>函数isEqual接收两个对象, 判断它们的相等性, 返回boolean</p>
+<h3 id="根据相等判断的实用性-做出如下的相等性说明"><a href="#根据相等判断的实用性-做出如下的相等性说明" class="headerlink" title="根据相等判断的实用性, 做出如下的相等性说明:"></a>根据相等判断的实用性, 做出如下的相等性说明:</h3><ul>
+<li><p>原始类型<code>Number</code>, <code>String</code>, <code>Boolean</code>, <code>Undefined</code>, <code>Null</code>: 直接通过===判断, 经过对象包装(eg: new Number(1))的这类对象转换为原始类型再判断(即_.isEqual(new Number(1), 1)===true)</p>
+</li>
+<li><p>引用类型<code>Object</code>: 引用相同, 必然相等; 引用不同, 进行深入比较(其中type为function的类型, 先判断构造函数是是否相等, 再判断其自有的属性和方法是否也一致)</p>
+</li>
+</ul>
+<h5 id="原生js存在的不完善地方-这里列举一些常用到的特例"><a href="#原生js存在的不完善地方-这里列举一些常用到的特例" class="headerlink" title="原生js存在的不完善地方,这里列举一些常用到的特例:"></a>原生js存在的不完善地方,这里列举一些常用到的特例:</h5><ul>
+<li><p>原生会返回true的情况:</p>
+<ul>
+<li><code>null == undefined</code>(通过<code>null === undefined</code>返回false修正)</li>
+<li><code>-0 === +0</code>(通过<code>-Infinity === Infinity</code>返回false修正)</li>
+<li><code>NaN !== NaN</code>(通过<code>if(a!==a) return (b!==b)</code>修正)</li>
+</ul>
+</li>
+<li><p>原生会返回false</p>
+<ul>
+<li>经过对象包装的原始类型的比较: <code>new Number(1) === 1</code> (原生的这样判断其实是无可厚非的, 实际运用中我们统一都归为相等)</li>
+</ul>
+</li>
+</ul>
+<h3 id="用到的工具"><a href="#用到的工具" class="headerlink" title="用到的工具:"></a>用到的工具:</h3><ul>
+<li>typeof</li>
+<li>Object.prototype.toString</li>
+<li>运算符<code>+</code>可以把字符串转为数字</li>
+<li>lodash的keys,has方法</li>
+</ul>
+<h3 id="使用例子"><a href="#使用例子" class="headerlink" title="使用例子:"></a>使用例子:</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">isEqual(&#123;<span class="attr">name</span>: <span class="string">'rose'</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'rose'</span>&#125;) <span class="comment">// 返回true</span></span><br><span class="line">isEqual([&#123;<span class="attr">name</span>: <span class="string">'rose'</span>&#125;, <span class="number">2</span>], [&#123;<span class="attr">name</span>: <span class="string">'rose'</span>&#125;, <span class="number">2</span>]) <span class="comment">// 返回true</span></span><br><span class="line"><span class="keyword">var</span> A = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> B = <span class="keyword">new</span> A</span><br><span class="line"><span class="keyword">var</span> C = <span class="keyword">new</span> A</span><br><span class="line">isEqual(B, C) <span class="comment">//返回true</span></span><br></pre></td></tr></table></figure>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="keyword">from</span> <span class="string">'lodash'</span></span><br><span class="line"><span class="keyword">var</span> toString = <span class="built_in">Object</span>.prototype.toString</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> isEqual = <span class="function"><span class="keyword">function</span> (<span class="params">a, b, aStack, bStack</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//原始类型Number, String, Boolean</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 0 === -0 使用 1 / 0 !== 1/ -0 排除</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (a === b) <span class="keyword">return</span> a !== <span class="number">0</span> || <span class="number">1</span> / a === <span class="number">1</span> / b</span><br><span class="line"></span><br><span class="line">  <span class="comment">// null == undefined  返回true</span></span><br><span class="line">  <span class="comment">// null === undefined 返回false</span></span><br><span class="line">  <span class="keyword">if</span> (a == <span class="literal">null</span> || b == <span class="literal">null</span>) <span class="keyword">return</span> a === b</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">// isNaN !== isNaN 返回true</span></span><br><span class="line">  <span class="keyword">if</span> (a !== a) <span class="keyword">return</span> b !== b</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> className = toString.call(a)</span><br><span class="line">  <span class="keyword">if</span> (className !== toString.call(b)) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  <span class="keyword">switch</span> (className) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="string">'[object RegExp]'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'[object String]'</span>:</span><br><span class="line">      <span class="keyword">return</span> <span class="string">''</span> + a === <span class="string">''</span> + b</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="string">'[object Number]'</span>:</span><br><span class="line">      <span class="keyword">if</span> (+a !== +a) <span class="keyword">return</span> +b !== +b</span><br><span class="line">      <span class="keyword">return</span> +a === <span class="number">0</span> ? <span class="number">1</span> / +a === <span class="number">1</span> / b : +a === +b</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'[object Date]'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'[object Boolean]'</span>:</span><br><span class="line">      <span class="keyword">return</span> +a === +b</span><br><span class="line">    <span class="comment">// todo case '[object Symbol]'</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 判断a 是否为数组</span></span><br><span class="line">  <span class="keyword">var</span> areArrays = className === <span class="string">'[object Array]'</span></span><br><span class="line">  <span class="keyword">if</span> (!areArrays) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> a !== <span class="string">'object'</span> || <span class="keyword">typeof</span> b !== <span class="string">'object'</span>) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Objects with different constructors are not equivalent, but `Object`s or `Array`s</span></span><br><span class="line">    <span class="comment">// from different frames are.</span></span><br><span class="line">    <span class="comment">// 先判断构造函数是否相同</span></span><br><span class="line">    <span class="keyword">var</span> aCtor = a.constructor, bCtor = b.constructor</span><br><span class="line">    <span class="keyword">if</span> (aCtor !== bCtor) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  aStack = aStack || []</span><br><span class="line">  bStack = bStack || []</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> length = aStack.length</span><br><span class="line">  <span class="keyword">while</span> (length--) &#123;</span><br><span class="line">    <span class="comment">// 避免循环引用导致的死循环</span></span><br><span class="line">    <span class="keyword">if</span> (aStack[length] === a) <span class="keyword">return</span> bStack[length] === b</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  aStack.push(a)</span><br><span class="line">  bStack.push(b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (areArrays) &#123;</span><br><span class="line">    length = a.length</span><br><span class="line">    <span class="keyword">if</span> (length !== b.length) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (length--) &#123;</span><br><span class="line">      <span class="keyword">if</span> (!isEqual(a[length], b[length], aStack, bStack)) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> keys = _.keys(a), key</span><br><span class="line">    length = keys.length</span><br><span class="line">    <span class="keyword">if</span> (_.keys(b).length !== length) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (length--) &#123;</span><br><span class="line">      <span class="comment">// Deep compare each member</span></span><br><span class="line">      <span class="comment">// 递归比较</span></span><br><span class="line">      key = keys[length];</span><br><span class="line">      <span class="keyword">if</span> (!(_.has(b, key) &amp;&amp; isEqual(a[key], b[key], aStack, bStack))) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  aStack.pop()</span><br><span class="line">  bStack.pop()</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">  isEqual</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实用判断-判断某对象a是否为特定值"><a href="#实用判断-判断某对象a是否为特定值" class="headerlink" title="实用判断(判断某对象a是否为特定值)"></a>实用判断(判断某对象a是否为特定值)</h3><ul>
+<li>false: <code>a === false</code></li>
+<li>undefined: <code>typeof a === &#39;undefined&#39;</code></li>
+<li>null: <code>a === null</code></li>
+</ul>
+<p>参考链接:</p>
+<ul>
+<li><a href="https://lodash.com/docs/4.17.4" target="_blank" rel="noopener">lodash</a></li>
+<li><a href="https://github.com/hanzichi/underscore-analysis/blob/master/underscore-1.8.3.js/underscore-1.8.3-analysis.js" target="_blank" rel="noopener">underscore源码分析</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -296,9 +790,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-19T21:05:11+08:00">2018-02-19</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-19T21:05:11+08:00">2018-02-19</time>
             
 
             
@@ -425,9 +919,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-19T00:17:10+08:00">2018-02-19</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-19T00:17:10+08:00">2018-02-19</time>
             
 
             
@@ -552,9 +1046,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-17T20:37:32+08:00">2018-02-17</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-17T20:37:32+08:00">2018-02-17</time>
             
 
             
@@ -679,9 +1173,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-02-11T08:20:38+08:00">2018-02-11</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-11T08:20:38+08:00">2018-02-11</time>
             
 
             
@@ -735,6 +1229,7 @@
 </li>
 <li>git log –stat</li>
 <li>git log –stat –author=”jane”</li>
+<li>git log master</li>
 <li><p>git diff HEAD~ HEAD</p>
 </li>
 <li><p>git stash</p>
@@ -749,9 +1244,17 @@
 <li>git cherry-pick  commithash  只合并某一次提交</li>
 </ul>
 <ul>
+<li>git checkout commit-version file-path</li>
 <li>git checkout tags/<tag-name> -b <branch-name></branch-name></tag-name></li>
 <li>git tag -l</li>
+<li>git show branch:path/file</li>
 </ul>
+<p>删除远程分支</p>
+<ul>
+<li>git push &lt;remote_name&gt; :&lt;branch_name&gt;</li>
+</ul>
+<p>gitconfig的filemode用于设置是否记录文件权限的改变</p>
+<p>禁止git对中文文件名转码<br>git config core.quotepath false</p>
 
           
         
@@ -834,9 +1337,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-30T15:55:35+08:00">2017-08-30</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-30T15:55:35+08:00">2017-08-30</time>
             
 
             
@@ -957,9 +1460,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-29T17:53:44+08:00">2017-08-29</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-29T17:53:44+08:00">2017-08-29</time>
             
 
             
@@ -1081,9 +1584,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-22T16:35:17+08:00">2017-08-22</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-22T16:35:17+08:00">2017-08-22</time>
             
 
             
@@ -1129,350 +1632,9 @@
 <li>substr</li>
 <li>substring</li>
 </ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/22/regex/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/22/regex/" itemprop="url">regex</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">post.posted</span>
-              
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-22T16:34:17+08:00">2017-08-22</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>常用元字符</p>
 <ul>
-<li><code>\d</code>: 匹配数字</li>
-<li><code>\w</code>: 匹配字母,下划线,数字,汉字</li>
-<li><code>\s</code>: 匹配空白符,包括空格,制表符(tab),换行符,中文全角空格</li>
-<li><code>\b</code>: 匹配单词边界</li>
-<li><code>.</code>: 匹配除了换行符外的任意字符</li>
-<li><code>^</code>: 匹配开头</li>
-<li><code>$</code>: 匹配结尾</li>
-</ul>
-</li>
-<li><p>常用限定符</p>
-<ul>
-<li><code>?</code>: 出现零次或一次</li>
-<li><code>*</code>: 出现零次或多次</li>
-<li><code>+</code>: 出现一次或更多次</li>
-<li><code>{n}</code>: 出现n次</li>
-<li><code>{n, m}</code>: 出现n~m次</li>
-<li><code>{n,}</code>: 出现大于等于n次</li>
-</ul>
-</li>
-<li><p>反义</p>
-<ul>
-<li><code>\D</code>: 匹配非数字</li>
-<li><code>\W</code>: 匹配非字母,非下划线,非数字,非汉字</li>
-<li><code>\B</code>: 匹配非单词边界</li>
-<li><code>\S</code>: 匹配非空白符</li>
-<li><code>[^a]</code>: 匹配非a</li>
-<li><code>[^aeiou]</code>: 匹配非aeiou中的任何一个</li>
-</ul>
-</li>
-<li><p>分组    </p>
-<ul>
-<li><code>(exp)</code>: 匹配exp,并捕获文本到自动命名的组里</li>
-<li><code>(?&lt;name&gt;exp)</code>: 匹配exp,并命名分组name</li>
-<li><code>(?:exp)</code>: 匹配exp,不捕获 </li>
-</ul>
-</li>
-<li><p>后向引用</p>
-<ul>
-<li><code>$1</code>: 捕获用<code>()</code>匹配的分组1</li>
-<li><code>$groupName</code>: 捕获用<code>()</code>匹配的命名分组groupName</li>
-</ul>
-</li>
-<li><p>匹配或的集合</p>
-<ul>
-<li><code>[]</code>: 方括号<ul>
-<li><code>[aeiou]</code></li>
-<li><code>[^aeiou]</code></li>
-<li><code>[^.*?]</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>分支条件</p>
-<ul>
-<li><code>|</code>: 竖杠</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>贪婪与懒惰</p>
-<p>  默认总是匹配最多的情况,即贪婪, <code>.*</code> 会匹配尽可能多的重复。可以在后面加个<code>?</code>, 组成<code>.*?</code>, 即懒惰, 匹配尽可能少的符合条件的重复</p>
-</li>
-<li><p>零宽断言</p>
-<ul>
-<li><p>(?=exp)也叫零宽度正预测先行断言，它断言自身出现的位置的后面能匹配表达式exp。比如\b\w+(?=ing\b)，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找I’m singing while you’re dancing.时，它会匹配sing和danc。</p>
-</li>
-<li><p>(?&lt;=exp)也叫零宽度正回顾后发断言，它断言自身出现的位置的前面能匹配表达式exp。比如(?&lt;=\bre)\w+\b会匹配以re开头的单词的后半部分(除了re以外的部分)，例如在查找reading a book时，它匹配ading。</p>
-</li>
-</ul>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>eg:</th>
-<th>aabab</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a.*b</td>
-<td>aabab</td>
-</tr>
-<tr>
-<td>a.*?b</td>
-<td>aab</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/requirejs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/14/requirejs/" itemprop="url">requirejs</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">post.posted</span>
-              
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-08-14T17:17:15+08:00">2017-08-14</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>module: </p>
-<ul>
-<li>id</li>
-<li>name</li>
-<li>src</li>
-<li>dep</li>
+<li>charAt</li>
+<li>fromCharCode: UTF-16对应编码</li>
 </ul>
 
           
@@ -1516,7 +1678,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1563,8 +1725,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">29</span>
-                    <span class="site-state-item-name">state.posts</span>
+                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -1604,8 +1766,18 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">state.tags</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
               
@@ -1667,7 +1839,7 @@
 
 
 
-  <div class="powered-by">footer.powered</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -1675,7 +1847,7 @@
 
 
 
-  <div class="theme-info">footer.theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
 
 
 

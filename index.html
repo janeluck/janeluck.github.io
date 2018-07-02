@@ -107,7 +107,6 @@
 <meta property="og:title" content="Jane&#39;s Notes">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Jane&#39;s Notes">
-<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jane&#39;s Notes">
 
@@ -165,7 +164,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
 
   
   
@@ -211,19 +210,19 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />home</a>
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />tags</a>
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />archives</a>
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
         </li>
       
 
@@ -251,6 +250,484 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/03/前端中常用的编码格式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/03/前端中常用的编码格式/" itemprop="url">前端中常用的编码格式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-03T01:19:05+08:00">2018-07-03</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>计算机中的编码</p>
+<h5 id="ascii"><a href="#ascii" class="headerlink" title="ascii"></a>ascii</h5><p>机器只可执行的二进制编码， 一个字节(byte)是八位二进制位(bit)可表达256种字符<br>英文的128位对应了ascii码</p>
+<h5 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h5><p>放到多语言环境就不够使用， 找到了一种全集的解决办法: <code>unicode</code>， 这个符号集规定了符号的二进制代码， 但是没有指定如何存储。<br>比方说<code>严</code>的二进制代码是<code>100111000100101</code>， <code>a</code>是<code>01000001</code>。<br>这种长度不定，一是计算机无法分割出具体的字符，而是若是统一成固定的字节长度，会造成内存极大的浪费。</p>
+<h5 id="utf-8"><a href="#utf-8" class="headerlink" title="utf-8"></a>utf-8</h5><p>utf-8是unicode的一种实现方式， 特点是可变长度。<br>utf-8的规则:</p>
+<pre><code>- 使用1-4个字节表达字符
+- 如果第一个字节的开头为0，那么这个为单字节字符，可表达128位字符与ascii码一样
+- 如果字符需要用n(n &gt; 1)个字节表示, 那么第一个字节的开头n位为1，n+1位为0，第2个至第n个字节的前两位一致设为10
+</code></pre><p>utf-8对照表</p>
+<p>转换</p>
+<table>
+<thead>
+<tr>
+<th>字节数</th>
+<th>utf-8</th>
+<th>范围</th>
+<th>十进制</th>
+<th>十六进制</th>
+<th>unicode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0xxxxxxx</td>
+<td>00000000 ~ 01111111</td>
+<td>0 ~ 127</td>
+<td>0 ~ 7F</td>
+</tr>
+<tr>
+<td>2</td>
+<td>110xxxxx 10xxxxxx</td>
+<td>11000001 10000000  ~ 11011111 10111111</td>
+<td>128 ~ 2047</td>
+<td>80 ~ 7FF</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1110xxxx 10xxxxxx 10xxxxxx</td>
+<td>111000000 10100000 10000000  ~ 11101111 10111111 10111111</td>
+<td>2048 ~ 65535</td>
+<td>800 ~ FFFF</td>
+</tr>
+<tr>
+<td>4</td>
+<td>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</td>
+<td>11110000 10010000 10000000 10000000 ~ 11110111 10111111 10111111 10111111</td>
+<td>65536 ~ 2097151</td>
+<td>10000 ~ 1FFFFF</td>
+</tr>
+</tbody>
+</table>
+<p>文本类资源utf-8</p>
+<pre><code>- html
+- css
+- javascript
+</code></pre><p>图片类资源</p>
+<p>base64<br>2的六次方是64</p>
+<p>原理:<br>8 <em> 3 = 6 </em> 4</p>
+<ol>
+<li>取3个字符为一组, 重新生成为6 * 4的形式</li>
+<li>对照base64生成表转换</li>
+</ol>
+<p>思考: 优缺点?<br>缺点: 内容变大, 放到html里面无法缓存<br>优点: 可打印传递, 图片资源在网页中不需要再加载额外的http请求<br>视频音频类资源</p>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p><a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="noopener">阮一峰字符编码笔记</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/28/http长连接与短连接/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/28/http长连接与短连接/" itemprop="url">http长链接与短连接</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-28T06:58:34+08:00">2018-06-28</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="http1-1"><a href="#http1-1" class="headerlink" title="http1.1"></a>http1.1</h3><ul>
+<li><p>长连接</p>
+<p> http头部字段使用<code>connection:   keep-alive</code>, 后续同源复用tcp的链接通道。 一个tcp上的多次http请求, 只在第一次发起的时候三次握手.</p>
+</li>
+</ul>
+<ul>
+<li><p>短连接</p>
+<p> 每次都要tcp三次握手</p>
+</li>
+</ul>
+<p>综上, http长短连接其实就是tcp的长短连接. 补充到http的持久链接: <code>websocket</code>协议。 websocket本质上是一个基于tcp的协议，websocket不是http无状态协议，只是借助http协议升级客户端服务端的双工通信。协议名为”ws”，地址的写法：<code>ws://**</code>。</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a href="https://cloud.tencent.com/document/product/214/4149" target="_blank" rel="noopener">HTTP长连接说明</a></li>
+<li><a href="https://cloud.tencent.com/document/product/214/4150?fromSource=gwzcw.93403.93403.93403" target="_blank" rel="noopener">WebSocket原理说明</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/08/浏览器页面的进程和线程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/mineAvatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jane's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/08/浏览器页面的进程和线程/" itemprop="url">浏览器页面的进程和线程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T14:27:29+08:00">2018-05-08</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><p>浏览器没开一个tab, 就新启一个进程。</p>
+<ul>
+<li><p>原因:</p>
+<ul>
+<li>效率</li>
+<li>安全性</li>
+<li>互不影响: 一个页签崩溃不会影响到其他页面</li>
+</ul>
+</li>
+<li><p>优点: 同上</p>
+</li>
+<li>缺点: 吃内存, 浏览器开的越久计算机越来越慢</li>
+</ul>
+<h4 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h4><p>浏览器内核为每个页面实例化一个渲染引擎, 渲染引擎是多线程的, 通常有以下常驻线程:</p>
+<ul>
+<li>JavaScript引擎线程</li>
+<li>GUI渲染线程</li>
+<li>定时器触发线程</li>
+<li>事件触发线程</li>
+<li>http异步请求线程</li>
+</ul>
+<p>其中:</p>
+<ul>
+<li>GUI和JavaScript互斥</li>
+<li>定时器, 事件, 异步排队进JavaScript的事件轮询机制</li>
+</ul>
+<p>问题:<br>页面内嵌的iframe会新开进程吗？</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a href="https://xmoyking.github.io/2016/09/24/debug/" target="_blank" rel="noopener">通过Timeline分析帧渲染模式</a><br>怎么查看chrome内部开的进程?</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -296,9 +773,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-04-02T15:28:24+08:00">2018-04-02</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-02T15:28:24+08:00">2018-04-02</time>
             
 
             
@@ -419,9 +896,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-29T17:18:18+08:00">2018-03-29</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-29T17:18:18+08:00">2018-03-29</time>
             
 
             
@@ -565,9 +1042,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-22T11:09:09+08:00">2018-03-22</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-22T11:09:09+08:00">2018-03-22</time>
             
 
             
@@ -616,7 +1093,7 @@
 </ul>
 </li>
 <li><p>alias<br>  开发中可以简写某个目录文件路径, 不用总写相对路径, 尤其适合自定义模块的引用。<br>  <code>webpack</code>的config添加配置为:</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    resolve: &#123;</span><br><span class="line"></span><br><span class="line">        alias: &#123;</span><br><span class="line">            src: path.resolve(__dirname, <span class="string">'./src'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    resolve: &#123;</span><br><span class="line"></span><br><span class="line">        alias: &#123;</span><br><span class="line">            src: path.resolve(__dirname, &apos;./src&apos;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>  使用babel的可以引入插件<a href="https://github.com/tleunen/babel-plugin-module-resolver#readme" target="_blank" rel="noopener">babel-plugin-module-resolver</a><br>  <code>.babelrc</code>配置如下</p>
   <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"plugins"</span>: [</span><br><span class="line">        [</span><br><span class="line">            <span class="string">"module-resolver"</span>,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"alias"</span>: &#123;</span><br><span class="line">                    <span class="attr">"src"</span>: <span class="string">"./src"</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -724,9 +1201,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-22T10:34:09+08:00">2018-03-22</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-22T10:34:09+08:00">2018-03-22</time>
             
 
             
@@ -851,9 +1328,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-20T19:42:05+08:00">2018-03-20</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-20T19:42:05+08:00">2018-03-20</time>
             
 
             
@@ -974,9 +1451,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-19T16:23:27+08:00">2018-03-19</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-19T16:23:27+08:00">2018-03-19</time>
             
 
             
@@ -1103,9 +1580,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">post.posted</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-17T15:44:52+08:00">2018-03-17</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-17T15:44:52+08:00">2018-03-17</time>
             
 
             
@@ -1207,433 +1684,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/17/vim常用命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/17/vim常用命令/" itemprop="url">vim常用命令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">post.posted</span>
-              
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-17T12:31:06+08:00">2018-03-17</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>常用命令总结</p>
-<h3 id="可视模式"><a href="#可视模式" class="headerlink" title="可视模式"></a>可视模式</h3><ul>
-<li>常规移动<ul>
-<li>h: ←</li>
-<li>j: ↓</li>
-<li>k: ↑</li>
-<li>l: →</li>
-</ul>
-</li>
-<li>单词移动<ul>
-<li>w: word</li>
-<li>b: beginning</li>
-<li>e: end</li>
-</ul>
-</li>
-<li>倍数组合移动<ul>
-<li>3w</li>
-<li>2j</li>
-</ul>
-</li>
-<li>行首尾<ul>
-<li>0</li>
-<li>$</li>
-</ul>
-</li>
-<li>页首尾<ul>
-<li>gg</li>
-<li>G</li>
-</ul>
-</li>
-</ul>
-<h3 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h3>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/从零写一个Promise/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/14/从零写一个Promise/" itemprop="url">从零写一个Promise</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">post.posted</span>
-              
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-14T20:35:01+08:00">2018-03-14</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
-<li><a href="https://juejin.im/post/5abb6cce5188255c3200c842" target="_blank" rel="noopener">从零实现promise</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/13/常用的unix命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/mineAvatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jane's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/13/常用的unix命令/" itemprop="url">常用的unix命令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">post.posted</span>
-              
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2018-03-13T19:55:25+08:00">2018-03-13</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>找出匹配的文件并批量执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find ./images/scrm/leftNav -iname &apos;._*.png&apos; -exec rm &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查找目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find ./ -name [directoryname] -type d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在指定目录下查找字符串</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep -r [string] [path]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在服务器之间拷贝文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ scp -P [port]  [file]    [user]@[address]:[path]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>从终端输入并写到指定文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat &gt; [filename]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看项目里npm依赖版本号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm list --depth=0 |grep [name]</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1680,8 +1735,8 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">29</span>
-                    <span class="site-state-item-name">state.posts</span>
+                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -1721,8 +1776,18 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">state.tags</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
               
@@ -1784,7 +1849,7 @@
 
 
 
-  <div class="powered-by">footer.powered</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -1792,7 +1857,7 @@
 
 
 
-  <div class="theme-info">footer.theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.4</div>
 
 
 
